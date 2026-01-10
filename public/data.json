@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "job_title": "Software and AI Engineer",
+    "heading": "Crafting digital<br />experiences with<br /><span class=\"text-muted-foreground\">intention.</span>",
+    "sub_heading": "I design and build thoughtful products that prioritize clarity, usability, and meaningful interactions.",
+    "logo_url": "https://i.ibb.co/mVCbgMM5/K-1.png"
+  },
+  "about": {
+    "about_content": "I am deeply passionate about solving global challenges through impactful technology solutions. I build with intention, purpose and passion. I build to solve, improve and elevate.",
+    "location": "Lagos, Nigeria"
+  },
+  "stack": {
+    "tools": [
+      "Backend (Django/DRF, Node.js/Express)",
+      "Frontend (Next.js, React)",
+      "Low Code (Frappe, Framer)",
+      "AI (RAG, Generative AI, Agentic AI)",
+      "AI Automation (N8N)",
+      "Databases (PostgreSQL, MariaDB, MySQL, MongoDB)",
+      "Version Control (Git)",
+      "Containerization (Docker, GHCR)",
+      "IaaS (AWS, GCP, Azure)"
+    ]
+  },
+  "projects": [
+    {
+      "title": "Taimako.AI",
+      "description": "Taimako is a modern SaaS platform designed to empower businesses with AI-driven customer experience and lead generation tools. It provides an intelligent, retrieval-augmented generation (RAG) chat widget that can be easily embedded into any website, allowing businesses to automate customer support and engagement using their own knowledge base.",
+      "tools": [
+        "NextJs",
+        "FastAPI",
+        "Google ADK",
+        "RAG|Agentic AI",
+        "Docker",
+        "AWS"
+      ],
+      "link": "https://github.com/stenwire/Taimako.AI"
+    },
+    {
+      "title": "Car Booking API",
+      "description": "Developed a high-performance vehicle reservation system with real-time availability tracking, secure payment processing, and driver management features.",
+      "tools": [
+        "Python",
+        "Django",
+        "Redis",
+        "Docker",
+        "AWS"
+      ],
+      "link": "https://github.com/stenwire/AutoGo"
+    },
+    {
+      "title": "Chat Based Order Management API",
+      "description": "Innovative platform that enables businesses to process customer orders directly through chat interfaces, featuring natural language processing.",
+      "tools": [
+        "NextJs",
+        "Docker",
+        "AWS"
+      ],
+      "link": "https://github.com/stenwire/chat-based-order-management-API"
+    },
+    {
+      "title": "NaijaFarmHand - AI Agent",
+      "description": "An intelligent assistant built with Google's ADK that provides contextual farming guidance for Nigerian agriculture.",
+      "tools": [
+        "Python",
+        "Google ADK",
+        "RAG"
+      ],
+      "link": "https://github.com/stenwire/NaijaFarmHand-Agent"
+    }
+  ],
+  "writings": [
+    {
+      "title": "Learn Google ADK: Build a farming agent",
+      "description": "A comprehensive guide to building AI assistants using Google's Agent Development Kit, with step-by-step instructions.",
+      "published_date": "April 2025",
+      "time_to_read": "3 min read",
+      "link": "https://dev.to/sten/learn-google-agent-adk-build-a-farming-agent-pc8"
+    },
+    {
+      "title": "Performance Testing: Is Your API Ready?",
+      "description": "An in-depth exploration of API performance testing methodologies, covering load testing, stress testing, and scalability benchmarking.",
+      "published_date": "January 2025",
+      "time_to_read": "5 min read",
+      "link": "https://dev.to/sten/performance-testing-is-your-api-ready-for-real-world-traffic-4e9p"
+    },
+    {
+      "title": "Understanding Row-level locking",
+      "description": "A technical deep dive into database concurrency control through row-level locking. Essential for backend developers.",
+      "published_date": "October 2024",
+      "time_to_read": "6 min read",
+      "link": "https://dev.to/sten/understanding-row-level-locking-in-databases-2c8j"
+    }
+  ],
+  "experience": [
+    {
+      "job_title": "Product Engineer",
+      "organization": "Venco Africa",
+      "description": "Built an AI Agent to support the customer experience team, boosting their ticket resolving rate by 40%. Optimized database queries and improved onboarding of new staff.",
+      "start_date": "February 2025",
+      "end_date": "Present"
+    },
+    {
+      "job_title": "Backend Developer",
+      "organization": "Cospire",
+      "description": "Designed an onboarding system increasing client efficiency by 75%. Developed a secure payment flow and implemented a booking logic, increasing reservations by 30%.",
+      "start_date": "April 2024",
+      "end_date": "January 2025"
+    },
+    {
+      "job_title": "Back-end Engineer",
+      "organization": "Upnyx",
+      "description": "Engineered AI Agents for marketing and research. Provided support to junior developers, improving their efficiency by 60%. Built RESTful services for fintech applications.",
+      "start_date": "September 2022",
+      "end_date": "April 2024"
+    }
+  ],
+  "contact": {
+    "email": "nwankwostephen039@yahoo.com",
+    "github_link": "#",
+    "linkedin_link": "#",
+    "x_link": "#"
+  },
+  "footer": {
+    "resume_link": "#",
+    "github_link": "#",
+    "linkedin_link": "#"
+  }
+}
