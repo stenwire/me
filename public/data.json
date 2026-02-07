@@ -34,7 +34,8 @@
         "Docker",
         "AWS"
       ],
-      "link": "https://github.com/stenwire/Taimako.AI"
+      "link": "https://taimako.dubem.xyz/",
+      "github_url": "https://github.com/stenwire/Taimako.AI"
     },
     {
       "title": "Car Booking API",
@@ -46,7 +47,8 @@
         "Docker",
         "AWS"
       ],
-      "link": "https://github.com/stenwire/AutoGo"
+      "link": "https://github.com/stenwire/AutoGo",
+      "github_url": "https://github.com/stenwire/AutoGo"
     },
     {
       "title": "Chat Based Order Management API",
@@ -56,7 +58,8 @@
         "Docker",
         "AWS"
       ],
-      "link": "https://github.com/stenwire/chat-based-order-management-API"
+      "link": "https://github.com/stenwire/chat-based-order-management-API",
+      "github_url": "https://github.com/stenwire/chat-based-order-management-API"
     },
     {
       "title": "NaijaFarmHand - AI Agent",
@@ -66,7 +69,8 @@
         "Google ADK",
         "RAG"
       ],
-      "link": "https://github.com/stenwire/NaijaFarmHand-Agent"
+      "link": "https://github.com/stenwire/NaijaFarmHand-Agent",
+      "github_url": "https://github.com/stenwire/NaijaFarmHand-Agent"
     }
   ],
   "writings": [
@@ -96,34 +100,41 @@
     {
       "job_title": "Product Engineer",
       "organization": "Venco Africa",
-      "description": "Built an AI Agent to support the customer experience team, boosting their ticket resolving rate by 40%. Optimized database queries and improved onboarding of new staff.",
+      "description": "Built an AI Agent that supported the customer experience team and increased ticket resolution rate by 40%, while optimizing database queries and streamlining new staff onboarding. These improvements significantly enhanced team efficiency, reduced response times, and accelerated staff productivity.",
       "start_date": "February 2025",
       "end_date": "Present"
     },
     {
       "job_title": "Backend Developer",
       "organization": "Cospire",
-      "description": "Designed an onboarding system increasing client efficiency by 75%. Developed a secure payment flow and implemented a booking logic, increasing reservations by 30%.",
+      "description": "Designed an efficient onboarding system that boosted client efficiency by 75%, along with a secure payment flow and smart booking logic that increased reservations by 30%. These improvements significantly enhanced user experience, operational speed, and revenue generation.",
       "start_date": "April 2024",
       "end_date": "January 2025"
     },
     {
-      "job_title": "Back-end Engineer",
+      "job_title": "Backend Engineer",
       "organization": "Upnyx",
-      "description": "Engineered AI Agents for marketing and research. Provided support to junior developers, improving their efficiency by 60%. Built RESTful services for fintech applications.",
+      "description": "Engineered AI agents for marketing and research, built secure RESTful services for fintech applications, and mentored junior developers to boost their efficiency by 60%. These efforts enhanced team productivity, delivered intelligent automation tools, and strengthened core fintech infrastructure.",
       "start_date": "September 2022",
       "end_date": "April 2024"
+    },
+    {
+      "job_title": "Backend Engineer",
+      "organization": "SoftDrop",
+      "description": "Implemented a secure KYC service for compliant customer onboarding, a high-performance booking system with 42% faster response times, and a robust media upload service for handling large-scale files. These enhancements improved user satisfaction, data security, and overall system reliability.",
+      "start_date": "February 2021",
+      "end_date": "May 2022"
     }
   ],
   "contact": {
     "email": "nwankwostephen039@yahoo.com",
-    "github_link": "#",
-    "linkedin_link": "#",
-    "x_link": "#"
+    "github_link": "https://github.com/stenwire",
+    "linkedin_link": "https://www.linkedin.com/in/stephen-nwankwo-9876b4196/",
+    "x_link": "https://x.com/Sage_Sten"
   },
   "footer": {
-    "resume_link": "#",
-    "github_link": "#",
-    "linkedin_link": "#"
+    "resume_link": "https://drive.google.com/file/d/1VUkuoehzcLeU0Kk673rYJdbZMnFFiV8N/view?usp=sharing",
+    "github_link": "https://github.com/stenwire",
+    "linkedin_link": "https://www.linkedin.com/in/stephen-nwankwo-9876b4196/"
   }
 }

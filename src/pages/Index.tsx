@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Portfolio — Designer & Developer";
+    document.title = "Stephen Nwankwo — Software and AI Engineer";
   }, []);
 
   return (

@@ -21,6 +21,7 @@ interface ProjectData {
   description: string;
   tools: string[];
   link: string;
+  github_url: string;
 }
 
 interface WritingData {

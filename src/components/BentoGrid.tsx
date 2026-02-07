@@ -94,6 +94,8 @@ const BentoGrid = () => {
                 title={project.title}
                 description={project.description}
                 tags={project.tools}
+                link={project.link}
+                github_url={project.github_url}
                 className={index === 0 ? "md:col-span-2 lg:col-span-2" : ""}
                 delay={0.4 + index * 0.1}
               />
