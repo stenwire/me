@@ -25,7 +25,7 @@
   "projects": [
     {
       "title": "Taimako.AI",
-      "description": "Taimako is a modern SaaS platform designed to empower businesses with AI-driven customer experience and lead generation tools. It provides an intelligent, retrieval-augmented generation (RAG) chat widget that can be easily embedded into any website, allowing businesses to automate customer support and engagement using their own knowledge base.",
+      "description": "TaimakoAI is an AI-powered customer support platform that leverages an agentic Retrieval-Augmented Generation (RAG) engine. It processes uploaded knowledge base documents to provide accurate, context-aware responses to customer queries via a smart embeddable chat widget or WhatsApp. It features a business dashboard for managing documents and analytics, along with capabilities for human escalation when needed, and subscription billing.",
       "tools": [
         "NextJs",
         "FastAPI",
@@ -51,15 +51,15 @@
       "github_url": "https://github.com/stenwire/AutoGo"
     },
     {
-      "title": "Chat Based Order Management API",
-      "description": "Innovative platform that enables businesses to process customer orders directly through chat interfaces, featuring natural language processing.",
+      "title": "Vendkit.IO",
+      "description": "A smart vending platform that enables businesses, landlords, and property managers to automate and manage prepaid utilities like electricity, water, and gas.",
       "tools": [
-        "NextJs",
-        "Docker",
-        "AWS"
+        "Frappe",
+        "Django Rest Framework",
+        "React"
       ],
-      "link": "https://github.com/stenwire/chat-based-order-management-API",
-      "github_url": "https://github.com/stenwire/chat-based-order-management-API"
+      "link": "https://vendkit.io/",
+      "github_url": "https://vendkit.io/"
     },
     {
       "title": "NaijaFarmHand - AI Agent",
