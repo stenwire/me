@@ -51,6 +51,8 @@ interface FooterData {
   resume_link: string;
   github_link: string;
   linkedin_link: string;
+  devto_link: string;
+  medium_link: string;
 }
 
 export interface PortfolioData {
