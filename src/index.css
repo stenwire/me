@@ -1,151 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Warm neutral palette */
-    --background: 35 25% 94%;
-    --foreground: 0 0% 11%;
-
-    --card: 35 22% 92%;
-    --card-foreground: 0 0% 11%;
-
-    --popover: 35 25% 94%;
-    --popover-foreground: 0 0% 11%;
-
-    /* Muted charcoal accent */
-    --primary: 200 8% 25%;
-    --primary-foreground: 35 25% 94%;
-
-    --secondary: 35 18% 88%;
-    --secondary-foreground: 0 0% 11%;
-
-    --muted: 35 15% 85%;
-    --muted-foreground: 0 0% 42%;
-
-    --accent: 35 20% 90%;
-    --accent-foreground: 0 0% 11%;
-
-    --destructive: 0 60% 50%;
+    --background: 0 0% 93%;
+    --foreground: 0 0% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    --primary: 210 100% 20%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 93%;
+    --secondary-foreground: 0 0% 13%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 210 50% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-
-    --border: 35 15% 85%;
-    --input: 35 15% 85%;
-    --ring: 200 8% 25%;
-
-    --radius: 1rem;
-
-    /* Custom tokens */
-    --surface: 35 30% 96%;
+    --border: 0 0% 78%;
+    --input: 0 0% 88%;
+    --ring: 220 90% 40%;
+    --radius: 0rem;
+    --surface: 0 0% 93%;
     --surface-elevated: 0 0% 100%;
-    --text-secondary: 0 0% 42%;
-    --grid-color: 0 0% 50%;
+    --text-secondary: 0 0% 40%;
+    --grid-color: 0 0% 70%;
 
-    --sidebar-background: 35 25% 94%;
-    --sidebar-foreground: 0 0% 11%;
-    --sidebar-primary: 200 8% 25%;
-    --sidebar-primary-foreground: 35 25% 94%;
-    --sidebar-accent: 35 20% 90%;
-    --sidebar-accent-foreground: 0 0% 11%;
-    --sidebar-border: 35 15% 85%;
-    --sidebar-ring: 200 8% 25%;
-  }
-
-  .dark {
-    --background: 0 0% 8%;
-    --foreground: 35 25% 94%;
-
-    --card: 0 0% 12%;
-    --card-foreground: 35 25% 94%;
-
-    --popover: 0 0% 8%;
-    --popover-foreground: 35 25% 94%;
-
-    --primary: 35 25% 94%;
-    --primary-foreground: 0 0% 11%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 35 25% 94%;
-
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 0 0% 15%;
-    --accent-foreground: 35 25% 94%;
-
-    --destructive: 0 60% 40%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 35 25% 94%;
-
-    --surface: 0 0% 10%;
-    --surface-elevated: 0 0% 14%;
-    --text-secondary: 0 0% 55%;
-    --grid-color: 0 0% 30%;
-
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 35 25% 94%;
-    --sidebar-primary: 35 25% 94%;
-    --sidebar-primary-foreground: 0 0% 11%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 35 25% 94%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 35 25% 94%;
+    --sidebar-background: 0 0% 93%;
+    --sidebar-foreground: 0 0% 13%;
+    --sidebar-primary: 210 100% 20%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 90%;
+    --sidebar-accent-foreground: 0 0% 13%;
+    --sidebar-border: 0 0% 78%;
+    --sidebar-ring: 220 90% 40%;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    border-radius: 0 !important;
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+
+  a {
+    color: #0033cc;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: #663399;
+  }
+  a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin: 14px 0;
   }
 }
 
 @layer components {
-  .grid-background {
-    background-image: 
-      linear-gradient(to right, hsl(var(--grid-color) / 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--grid-color) / 0.06) 1px, transparent 1px);
-    background-size: 40px 40px;
+  /* White content box with gray header row — the classic 2000s "table cell" card */
+  .page-box {
+    background: #ffffff;
+    border: 1px solid #cccccc;
   }
 
+  .page-box-header {
+    background: #e8e8e8;
+    border-bottom: 1px solid #cccccc;
+    padding: 5px 10px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 0.82rem;
+    color: #333333;
+  }
+
+  /* Section heading with blue left accent bar */
+  .section-heading {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003366;
+    border-left: 4px solid #336699;
+    padding-left: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* The horizontal nav strip below the banner */
+  .site-nav {
+    background: #336699;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .site-nav a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-right: 1px solid rgba(255,255,255,0.25);
+    display: block;
+  }
+  .site-nav a:hover {
+    background: rgba(255,255,255,0.18);
+    color: #ffffff !important;
+  }
+  .site-nav a:last-child {
+    border-right: none;
+  }
+
+  /* Small inline tag badge */
+  .tag-badge {
+    display: inline-block;
+    background: #efefef;
+    border: 1px solid #cccccc;
+    color: #555555;
+    font-size: 11px;
+    padding: 1px 7px;
+    margin: 2px 1px;
+    font-family: Verdana, Arial, sans-serif;
+  }
+
+  /* Old-school browser tab strip */
+  .tab-strip {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #336699;
+    gap: 2px;
+    padding-bottom: 0;
+    margin-bottom: -2px;
+  }
+
+  .retro-tab {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 14px;
+    background: #dddddd;
+    border: 1px solid #aaaaaa;
+    border-bottom: 2px solid #336699;
+    color: #444444;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .retro-tab:hover {
+    background: #eeeeee;
+    color: #003366;
+  }
+
+  .retro-tab-active {
+    background: #ffffff;
+    color: #003366;
+    border: 1px solid #aaaaaa;
+    border-bottom: 2px solid #ffffff;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Generic hover: subtle shadow */
   .card-hover {
-    @apply transition-all duration-300 ease-out;
+    transition: box-shadow 0.15s ease;
   }
-
   .card-hover:hover {
-    @apply -translate-y-1 shadow-lg;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.14);
   }
 
-  .link-underline {
-    @apply relative inline-block;
+  .grid-background {
+    background-color: #ececec;
   }
 
-  .link-underline::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-full h-px bg-foreground scale-x-0 origin-right transition-transform duration-300;
+  /* Action button */
+  .retro-btn {
+    display: inline-block;
+    background: #e0e8f0;
+    border: 1px solid #336699;
+    border-right-color: #003366;
+    border-bottom-color: #003366;
+    color: #003366;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .retro-btn:hover {
+    background: #c8d8f0;
+    color: #003366;
+    text-decoration: none;
+  }
+  .retro-btn:active {
+    border-color: #003366;
+    border-right-color: #336699;
+    border-bottom-color: #336699;
   }
 
-  .link-underline:hover::after {
-    @apply scale-x-100 origin-left;
+  /* Muted secondary link button */
+  .retro-btn-ghost {
+    display: inline-block;
+    background: #f5f5f5;
+    border: 1px solid #aaaaaa;
+    border-right-color: #777777;
+    border-bottom-color: #777777;
+    color: #444444;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    padding: 5px 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .retro-btn-ghost:hover {
+    background: #eeeeee;
+    color: #003366;
+    text-decoration: none;
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  .text-balance { text-wrap: balance; }
 }

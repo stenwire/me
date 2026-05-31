@@ -5,13 +5,7 @@ import TabSelector, { Tab } from "./TabSelector";
 import StatusPill from "./StatusPill";
 import ExperienceCard from "./ExperienceCard";
 import WritingsCard from "./WritingsCard";
-import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
-
-
-
-
 
 const BentoGrid = () => {
   const [activeTab, setActiveTab] = useState<Tab>("projects");
@@ -20,38 +14,43 @@ const BentoGrid = () => {
   if (isLoading) return null;
 
   return (
-    <section id="work" className="py-20 md:py-32">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6">
-        {/* About & Skills Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-16">
-          {/* About Card */}
-          <BentoCard size="medium" delay={0.3}>
-            <div className="h-full flex flex-col justify-between">
-              <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-4">About</p>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-4">
-                  Build To Solve
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                  {data?.about.about_content}
-                </p>
-              </div>
-              <div className="flex items-center gap-2 mt-6 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span>{data?.about.location}</span>
-              </div>
-            </div>
+    <section id="work" style={{ paddingBottom: "48px" }}>
+      <div className="container mx-auto px-4 sm:px-6" style={{ maxWidth: "900px" }}>
+
+        {/* ── About & Stack ───────────────────────────────────── */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 opacity-0 animate-fade-in"
+          style={{ marginBottom: "28px", animationDelay: "0.2s", paddingTop: "28px" }}
+        >
+          <BentoCard title="About Me" delay={0.2}>
+            <p
+              style={{
+                fontFamily: "Verdana, Arial, sans-serif",
+                fontSize: "12px",
+                color: "#444444",
+                lineHeight: 1.7,
+                marginBottom: "12px",
+              }}
+            >
+              {data?.about.about_content}
+            </p>
+            <StatusPill />
+            <p
+              style={{
+                fontFamily: "Verdana, Arial, sans-serif",
+                fontSize: "11px",
+                color: "#888888",
+                marginTop: "8px",
+              }}
+            >
+              📍 {data?.about.location}
+            </p>
           </BentoCard>
 
-          {/* Skills Card */}
-          <BentoCard size="medium" delay={0.4}>
-            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-4">Stack</p>
-            <div className="flex flex-wrap gap-2">
+          <BentoCard title="Tech Stack" delay={0.3}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
               {data?.stack.tools.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium bg-muted/50 rounded-lg hover:bg-muted transition-colors"
-                >
+                <span key={skill} className="tag-badge">
                   {skill}
                 </span>
               ))}
@@ -59,95 +58,147 @@ const BentoGrid = () => {
           </BentoCard>
         </div>
 
-        {/* Selected Work Header with Status Pill and Tab Selector */}
-        <div className="mb-8">
+        {/* ── Selected Work ───────────────────────────────────── */}
+        <div style={{ marginBottom: "12px" }}>
           <div
-            className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.1s" }}
+            className="opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.3s", marginBottom: "8px" }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+            <h2 className="section-heading" style={{ fontSize: "1.3rem" }}>
               Selected Work
             </h2>
-            <StatusPill />
+            <p style={{ fontFamily: "Verdana, Arial, sans-serif", fontSize: "12px", color: "#666666", marginBottom: "14px" }}>
+              A selection of projects, articles, and positions that reflect my work.
+            </p>
           </div>
-          <p
-            className="text-muted-foreground mb-6 max-w-xl opacity-0 animate-fade-in text-sm sm:text-base"
-            style={{ animationDelay: "0.2s" }}
-          >
-            A collection of projects that showcase my approach to design and development.
-          </p>
 
           <div
-            className="opacity-0 animate-fade-in overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0"
-            style={{ animationDelay: "0.3s" }}
+            className="opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.35s" }}
           >
             <TabSelector activeTab={activeTab} onChange={setActiveTab} />
           </div>
         </div>
 
-        {/* Tab Content */}
-        {activeTab === "projects" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {data?.projects.map((project, index) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                tags={project.tools}
-                link={project.link}
-                github_url={project.github_url}
-                className={index === 0 ? "md:col-span-2 lg:col-span-2" : ""}
-                delay={0.4 + index * 0.1}
-              />
-            ))}
-          </div>
-        )}
-
-        {activeTab === "writings" && <WritingsCard delay={0.4} />}
-
-        {activeTab === "experience" && <ExperienceCard delay={0.4} />}
-
-        {/* Contact Card */}
-        <div className="mt-16">
-          <BentoCard size="medium" delay={0.9} id="contact">
-            <div className="h-full flex flex-col justify-between">
-              <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-4">Contact</p>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-2">Let's work together</h3>
-                <p className="text-muted-foreground mb-6 text-sm sm:text-base">
-                  Have a project in mind? I'd love to hear about it.
-                </p>
+        {/* ── Tab content ─────────────────────────────────────── */}
+        <div
+          className="page-box"
+          style={{ borderTop: "2px solid #336699" }}
+        >
+          {activeTab === "projects" && (
+            <div>
+              <div style={{ padding: "16px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "14px" }}>
+                {data?.projects.map((project, index) => (
+                  <ProjectCard
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    tags={project.tools}
+                    link={project.link}
+                    github_url={project.github_url}
+                    delay={0.05 * index}
+                  />
+                ))}
               </div>
-
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <Button asChild className="w-full sm:w-auto">
-                  <a href={`mailto:${data?.contact.email}`} className="gap-2">
-                    <Mail className="h-4 w-4" />
-                    {data?.contact.email}
-                  </a>
-                </Button>
-
-                <div className="flex items-center justify-center sm:justify-start gap-2">
-                  <Button variant="ghost" size="icon" asChild>
-                    <a href={data?.contact.github_link} aria-label="GitHub">
-                      <Github className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button variant="ghost" size="icon" asChild>
-                    <a href={data?.contact.linkedin_link} aria-label="LinkedIn">
-                      <Linkedin className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button variant="ghost" size="icon" asChild>
-                    <a href={data?.contact.x_link} aria-label="Twitter">
-                      <Twitter className="h-5 w-5" />
-                    </a>
-                  </Button>
-                </div>
+              <div style={{ padding: "12px 16px", borderTop: "1px solid #eeeeee", display: "flex", justifyContent: "flex-end" }}>
+                <a
+                  href={data?.contact.github_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="retro-btn"
+                >
+                  View all projects on GitHub »
+                </a>
               </div>
             </div>
-          </BentoCard>
+          )}
+
+          {activeTab === "writings" && (
+            <div>
+              <div style={{ padding: "8px 0" }}>
+                <WritingsCard delay={0.1} />
+              </div>
+              <div style={{ padding: "12px 16px", borderTop: "1px solid #eeeeee", display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "flex-end" }}>
+                {data?.footer.devto_link && (
+                  <a
+                    href={data.footer.devto_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="retro-btn"
+                  >
+                    View articles on dev.to »
+                  </a>
+                )}
+                {data?.footer.medium_link && (
+                  <a
+                    href={data.footer.medium_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="retro-btn"
+                  >
+                    View articles on Medium »
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+
+          {activeTab === "experience" && (
+            <div>
+              <div style={{ padding: "8px 0" }}>
+                <ExperienceCard delay={0.1} />
+              </div>
+              <div style={{ padding: "12px 16px", borderTop: "1px solid #eeeeee", display: "flex", justifyContent: "flex-end" }}>
+                <a
+                  href={data?.footer.resume_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="retro-btn"
+                >
+                  View Résumé »
+                </a>
+              </div>
+            </div>
+          )}
         </div>
+
+        {/* ── Contact ─────────────────────────────────────────── */}
+        <div
+          id="contact"
+          className="page-box opacity-0 animate-fade-in"
+          style={{ marginTop: "28px", animationDelay: "0.5s" }}
+        >
+          <div className="page-box-header">Contact</div>
+          <div style={{ padding: "16px 18px" }}>
+            <h3 className="section-heading" style={{ fontSize: "1.1rem" }}>
+              Get in Touch
+            </h3>
+            <p style={{ fontFamily: "Verdana, Arial, sans-serif", fontSize: "12px", color: "#444444", marginBottom: "14px" }}>
+              Have a project in mind or want to work together? Send me an email or connect on social.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", alignItems: "center" }}>
+              <a
+                href={`mailto:${data?.contact.email}`}
+                className="retro-btn"
+              >
+                ✉ {data?.contact.email}
+              </a>
+              <span style={{ fontFamily: "Verdana, Arial, sans-serif", fontSize: "12px", color: "#888888" }}>
+                or:&nbsp;
+                {data?.contact.github_link && (
+                  <a href={data.contact.github_link} style={{ marginRight: "10px" }}>GitHub</a>
+                )}
+                {data?.contact.linkedin_link && (
+                  <a href={data.contact.linkedin_link} style={{ marginRight: "10px" }}>LinkedIn</a>
+                )}
+                {data?.contact.x_link && (
+                  <a href={data.contact.x_link}>Twitter / X</a>
+                )}
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

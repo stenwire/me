@@ -1,4 +1,3 @@
-import { ArrowUpRight, Github } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -11,56 +10,62 @@ interface ProjectCardProps {
   github_url?: string;
 }
 
-const ProjectCard = ({ title, description, tags, className, delay = 0, link, github_url }: ProjectCardProps) => {
+const ProjectCard = ({
+  title,
+  description,
+  tags,
+  className,
+  delay = 0,
+  link,
+  github_url,
+}: ProjectCardProps) => {
   return (
     <div
-      className={cn(
-        "group bg-surface-elevated rounded-2xl p-6 md:p-8 card-hover opacity-0 animate-fade-in cursor-pointer",
-        "border border-border/50",
-        "shadow-sm hover:shadow-xl hover:shadow-foreground/5",
-        className
-      )}
+      className={cn("page-box card-hover opacity-0 animate-fade-in", className)}
       style={{ animationDelay: `${delay}s` }}
     >
-      <div className="flex flex-col h-full">
-        <div className="flex items-start justify-between mb-4">
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {github_url && (
-              <a
-                href={github_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-muted/50 hover:bg-muted transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Github className="h-4 w-4" />
-              </a>
-            )}
-            {link && (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-muted/50 hover:bg-muted transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
-            )}
-          </div>
-        </div>
+      <div className="page-box-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <span>{title}</span>
+        <span style={{ display: "flex", gap: "10px", fontWeight: "normal", fontSize: "11px" }}>
+          {github_url && (
+            <a
+              href={github_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#0033cc", fontFamily: "Verdana, Arial, sans-serif" }}
+            >
+              [Source]
+            </a>
+          )}
+          {link && link !== github_url && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#0033cc", fontFamily: "Verdana, Arial, sans-serif" }}
+            >
+              [Live Demo]
+            </a>
+          )}
+        </span>
+      </div>
 
-        <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
+      <div style={{ padding: "12px 16px" }}>
+        <p
+          style={{
+            fontFamily: "Verdana, Arial, sans-serif",
+            fontSize: "12px",
+            color: "#444444",
+            lineHeight: 1.65,
+            marginBottom: "10px",
+          }}
+        >
           {description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div style={{ borderTop: "1px solid #eeeeee", paddingTop: "8px" }}>
           {tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 text-xs font-medium bg-muted/50 rounded-full text-muted-foreground"
-            >
+            <span key={tag} className="tag-badge">
               {tag}
             </span>
           ))}

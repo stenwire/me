@@ -75,6 +75,20 @@
   ],
   "writings": [
     {
+      "title": "Gen-Z Slang AI Translator with CopilotKit, ADK and RAG Grounding",
+      "description": "Build an interactive AI translation tool using CopilotKit, Google's Agent Development Kit, and retrieval-augmented generation to bridge communication between Gen-Z and non-Gen-Z speakers.",
+      "published_date": "October 2025",
+      "time_to_read": "6 min read",
+      "link": "https://medium.com/@nwankwostephen039/gen-z-slang-ai-translator-with-copilotkit-adk-and-rag-grounding-be4b2562a606"
+    },
+    {
+      "title": "Simple Rules to Follow When Building Multi-Agent Systems",
+      "description": "Practical guidelines for designing reliable, maintainable multi-agent AI architectures — covering orchestration patterns, failure handling, and inter-agent communication.",
+      "published_date": "2025",
+      "time_to_read": "5 min read",
+      "link": "https://medium.com/towards-artificial-intelligence/simple-rules-to-follow-when-building-multi-agent-systems-c7cbab686411"
+    },
+    {
       "title": "Learn Google ADK: Build a farming agent",
       "description": "A comprehensive guide to building AI assistants using Google's Agent Development Kit, with step-by-step instructions.",
       "published_date": "April 2025",
@@ -133,8 +147,10 @@
     "x_link": "https://x.com/Sage_Sten"
   },
   "footer": {
-    "resume_link": "https://drive.google.com/file/d/1VUkuoehzcLeU0Kk673rYJdbZMnFFiV8N/view?usp=sharing",
+    "resume_link": "https://drive.google.com/file/d/1dkr03SnCLlh4nndz9FnbCulyYX2taWTo/view?ths=true",
     "github_link": "https://github.com/stenwire",
-    "linkedin_link": "https://www.linkedin.com/in/stephen-nwankwo-9876b4196/"
+    "linkedin_link": "https://www.linkedin.com/in/stephen-nwankwo-9876b4196/",
+    "devto_link": "https://dev.to/sten",
+    "medium_link": "https://medium.com/@nwankwostephen039"
   }
 }

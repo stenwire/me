@@ -6,33 +6,65 @@ const Footer = () => {
   if (isLoading) return null;
 
   return (
-    <footer className="py-12 border-t border-border/50">
-      <div className="container max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} — Designed & built with intention
+    <footer style={{ borderTop: "2px solid #336699", backgroundColor: "#002255", marginTop: "0", paddingBottom: "0" }}>
+      {/* Dark bottom banner */}
+      <div
+        className="container mx-auto px-4 sm:px-6"
+        style={{ maxWidth: "900px", padding: "18px 20px" }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "Verdana, Arial, sans-serif",
+              fontSize: "11px",
+              color: "#aaccee",
+              margin: 0,
+            }}
+          >
+            &copy; {new Date().getFullYear()} Stephen Nwankwo — All rights reserved.
+            &nbsp;·&nbsp; Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long" })}
           </p>
-          <nav className="flex items-center gap-6">
-            <a
-              href={data?.footer.resume_link}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
-            >
-              Resume
-            </a>
-            <a
-              href={data?.footer.linkedin_link}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
-            >
-              LinkedIn
-            </a>
-            <a
-              href={data?.footer.github_link}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
-            >
-              GitHub
-            </a>
+
+          <nav style={{ display: "flex", gap: "14px" }}>
+            {[
+              { href: data?.footer.resume_link, label: "Résumé" },
+              { href: data?.footer.linkedin_link, label: "LinkedIn" },
+              { href: data?.footer.github_link, label: "GitHub" },
+            ].map(({ href, label }) => (
+              <a
+                key={label}
+                href={href}
+                style={{
+                  fontFamily: "Verdana, Arial, sans-serif",
+                  fontSize: "11px",
+                  color: "#aaccee",
+                  textDecoration: "underline",
+                }}
+              >
+                {label}
+              </a>
+            ))}
           </nav>
         </div>
+
+        <p
+          style={{
+            fontFamily: "Verdana, Arial, sans-serif",
+            fontSize: "10px",
+            color: "#446688",
+            margin: "8px 0 0",
+          }}
+        >
+          Best viewed at 1024×768. Tested in Firefox and Internet Explorer.
+        </p>
       </div>
     </footer>
   );

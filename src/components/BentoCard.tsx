@@ -7,6 +7,7 @@ interface BentoCardProps {
   size?: "small" | "medium" | "large" | "wide" | "tall";
   delay?: number;
   id?: string;
+  title?: string;
 }
 
 const sizeClasses = {
@@ -17,20 +18,21 @@ const sizeClasses = {
   tall: "col-span-1 row-span-2",
 };
 
-const BentoCard = ({ children, className, size = "small", delay = 0, id }: BentoCardProps) => {
+const BentoCard = ({ children, className, size = "small", delay = 0, id, title }: BentoCardProps) => {
   return (
     <div
       id={id}
       className={cn(
-        "bg-surface-elevated rounded-2xl p-6 md:p-8 card-hover opacity-0 animate-fade-in",
-        "border border-border/50",
-        "shadow-sm hover:shadow-xl hover:shadow-foreground/5",
+        "page-box card-hover opacity-0 animate-fade-in",
         sizeClasses[size],
         className
       )}
       style={{ animationDelay: `${delay}s` }}
     >
-      {children}
+      {title && <div className="page-box-header">{title}</div>}
+      <div style={{ padding: "14px 16px" }}>
+        {children}
+      </div>
     </div>
   );
 };

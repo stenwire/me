@@ -1,73 +1,130 @@
-import { ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
 
 const Hero = () => {
   const { data, isLoading } = usePortfolioData();
 
-  const scrollToWork = () => {
-    document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  if (isLoading) return <div className="min-h-screen grid-background" />;
+  if (isLoading) {
+    return <div className="grid-background" style={{ minHeight: "100vh" }} />;
+  }
 
   return (
-    <section className="min-h-screen relative flex items-center grid-background">
-      <div className="container max-w-6xl mx-auto px-4 sm:px-6 py-20">
-        {data?.hero.logo_url && (
-          <img src={data.hero.logo_url} alt="Logo" className="h-20 w-20 mb-8" />
-        )}
-        <div className="max-w-3xl">
-          <p
-            className="text-muted-foreground text-sm tracking-wide uppercase mb-6 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.1s" }}
-          >
-            {data?.hero.job_title}
-          </p>
+    <div>
+      {/* ── Banner ─────────────────────────────────────────────── */}
+      <header
+        style={{
+          background: "linear-gradient(135deg, #002255 0%, #003d80 55%, #005099 100%)",
+          padding: "32px 0 24px",
+        }}
+      >
+        <div className="container mx-auto px-4 sm:px-6" style={{ maxWidth: "900px" }}>
+          <div style={{ display: "flex", alignItems: "flex-start", gap: "20px" }}>
+            {data?.hero.logo_url && (
+              <img
+                src={data.hero.logo_url}
+                alt="Logo"
+                style={{ width: "64px", height: "64px", border: "2px solid rgba(255,255,255,0.3)", flexShrink: 0 }}
+              />
+            )}
+            <div>
+              <h1
+                style={{
+                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
+                  color: "#ffffff",
+                  margin: "0 0 4px 0",
+                  fontWeight: "bold",
+                  letterSpacing: "0.02em",
+                  textShadow: "1px 1px 3px rgba(0,0,0,0.4)",
+                }}
+              >
+                Stephen Nwankwo
+              </h1>
+              <p
+                style={{
+                  fontFamily: "Verdana, Arial, sans-serif",
+                  fontSize: "13px",
+                  color: "#aaccee",
+                  margin: 0,
+                }}
+              >
+                {data?.hero.job_title}
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
 
-          <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-8 opacity-0 animate-fade-in-up"
-            style={{ animationDelay: "0.2s" }}
-            dangerouslySetInnerHTML={{ __html: data?.hero.heading || "" }}
-          />
+      {/* ── Nav bar ────────────────────────────────────────────── */}
+      <nav className="site-nav">
+        <div className="container mx-auto" style={{ maxWidth: "900px", padding: "0 16px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <a href="#">Home</a>
+            <a href="#work">Projects</a>
+            <a href="#work">Writing</a>
+            <a href="#contact">Contact</a>
+            <a href="#work">Experience</a>
+          </div>
+        </div>
+      </nav>
 
-          <p
-            className="text-base sm:text-lg text-muted-foreground max-w-xl mb-12 leading-relaxed opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.4s" }}
-          >
-            {data?.hero.sub_heading}
-          </p>
+      {/* ── Main content ───────────────────────────────────────── */}
+      <div
+        className="container mx-auto px-4 sm:px-6 py-10"
+        style={{ maxWidth: "900px" }}
+      >
+        <div className="page-box card-hover opacity-0 animate-fade-in" style={{ animationDelay: "0.15s" }}>
+          <div className="page-box-header">Welcome</div>
+          <div style={{ padding: "20px 24px" }}>
+            <h2
+              className="opacity-0 animate-fade-in-up"
+              style={{
+                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
+                color: "#002255",
+                lineHeight: 1.3,
+                marginBottom: "16px",
+                animationDelay: "0.25s",
+              }}
+              dangerouslySetInnerHTML={{ __html: data?.hero.heading || "" }}
+            />
 
-          <div
-            className="flex items-center gap-4 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <Button onClick={scrollToWork} size="lg">
-              View Work
-            </Button>
-            <Button variant="ghost" size="lg" asChild>
-              <a href="#contact" className="link-underline">
-                Get in Touch
+            <hr />
+
+            <p
+              className="opacity-0 animate-fade-in"
+              style={{
+                fontFamily: "Verdana, Arial, sans-serif",
+                fontSize: "13px",
+                color: "#444444",
+                maxWidth: "600px",
+                lineHeight: 1.7,
+                marginBottom: "20px",
+                animationDelay: "0.35s",
+              }}
+            >
+              {data?.hero.sub_heading}
+            </p>
+
+            <div
+              className="opacity-0 animate-fade-in"
+              style={{ display: "flex", flexWrap: "wrap", gap: "8px", animationDelay: "0.45s" }}
+            >
+              <button
+                className="retro-btn"
+                onClick={() =>
+                  document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                View My Work »
+              </button>
+              <a href="#contact" className="retro-btn-ghost">
+                Contact Me
               </a>
-            </Button>
+            </div>
           </div>
         </div>
       </div>
-
-      <div
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in"
-        style={{ animationDelay: "0.8s" }}
-      >
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={scrollToWork}
-          className="animate-bounce"
-        >
-          <ArrowDown className="h-5 w-5" />
-        </Button>
-      </div>
-    </section>
+    </div>
   );
 };
 
