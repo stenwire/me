@@ -2,8 +2,10 @@ import { useQuery } from "@tanstack/react-query";
 
 interface HeroData {
   job_title: string;
+  name: string;
   heading: string;
   sub_heading: string;
+  profile_image: string;
   logo_url: string;
 }
 
@@ -12,8 +14,13 @@ interface AboutData {
   location: string;
 }
 
+interface StackGroup {
+  label: string;
+  items: string[];
+}
+
 interface StackData {
-  tools: string[];
+  groups: StackGroup[];
 }
 
 interface ProjectData {
@@ -59,6 +66,8 @@ export interface PortfolioData {
   hero: HeroData;
   about: AboutData;
   stack: StackData;
+  roles: string[];
+  availability: string;
   projects: ProjectData[];
   writings: WritingData[];
   experience: ExperienceData[];

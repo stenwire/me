@@ -1,8 +1,10 @@
 {
   "hero": {
     "job_title": "Software and AI Engineer",
-    "heading": "Crafting digital<br />experiences with<br /><span class=\"text-muted-foreground\">intention.</span>",
-    "sub_heading": "I design and build thoughtful products that prioritize clarity, usability, and meaningful interactions.",
+    "name": "Stephen Nwankwo",
+    "heading": "Software<br />& AI engineer<span class=\"dot\">.</span>",
+    "sub_heading": "building agentic systems and the backends beneath them. Lagos, Nigeria.",
+    "profile_image": "/me.jpeg",
     "logo_url": "https://i.ibb.co/mVCbgMM5/K-1.png"
   },
   "about": {
@@ -10,18 +12,23 @@
     "location": "Lagos, Nigeria"
   },
   "stack": {
-    "tools": [
-      "Backend (Django/DRF, Node.js/Express)",
-      "Frontend (Next.js, React)",
-      "Low Code (Frappe, Framer)",
-      "AI (RAG, Generative AI, Agentic AI)",
-      "AI Automation (N8N)",
-      "Databases (PostgreSQL, MariaDB, MySQL, MongoDB)",
-      "Version Control (Git)",
-      "Containerization (Docker, GHCR)",
-      "IaaS (AWS, GCP, Azure)"
+    "groups": [
+      { "label": "Languages", "items": ["Python", "TypeScript", "Go"] },
+      { "label": "Backend", "items": ["Django / DRF", "FastAPI", "Flask", "Express.js", "Nest.js", "Frappe / ERPNext"] },
+      { "label": "Frontend", "items": ["Next.js", "React"] },
+      { "label": "AI / ML", "items": ["LLMs", "RAG", "Agentic AI", "NLP", "Computer Vision", "LangChain", "Google ADK", "N8N"] },
+      { "label": "Databases", "items": ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Redis"] },
+      { "label": "Cloud & DevOps", "items": ["AWS", "Google Cloud", "Azure", "Docker", "GHCR", "GitHub Actions"] },
+      { "label": "API design", "items": ["REST", "GraphQL", "SOLID", "ACID"] }
     ]
   },
+  "roles": [
+    "AI Engineer — LLM-powered products, RAG pipelines, agentic systems (LangChain, Google ADK)",
+    "Backend Engineer — high-performance APIs and microservices (Django, FastAPI, Node.js)",
+    "Product Engineer — owning features end to end, from data model to dashboard",
+    "Platform Engineer — Frappe / ERPNext customization and integrations"
+  ],
+  "availability": "Open to full-time, contract, or consulting — remote or hybrid (Lagos / WAT).",
   "projects": [
     {
       "title": "Taimako.AI",
@@ -34,7 +41,7 @@
         "Docker",
         "AWS"
       ],
-      "link": "https://taimako.dubem.xyz/",
+      "link": "https://taimakoai.onrender.com",
       "github_url": "https://github.com/stenwire/Taimako.AI"
     },
     {
