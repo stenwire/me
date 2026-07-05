@@ -44,7 +44,7 @@ Implemented a secure KYC service, a high-performance booking system with 42% fas
 ### Taimako.AI
 AI-powered customer support platform using an agentic RAG engine. Processes knowledge base documents to provide accurate, context-aware responses via an embeddable chat widget or WhatsApp. Features a business dashboard, human escalation, and subscription billing.
 - Stack: Next.js, FastAPI, Google ADK, RAG, Docker, AWS
-- Live: https://taimako.dubem.xyz/
+- Live: https://taimakoai.onrender.com
 - GitHub: https://github.com/stenwire/Taimako.AI
 
 ### Vendkit.IO
