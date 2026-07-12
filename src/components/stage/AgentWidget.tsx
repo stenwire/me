@@ -49,11 +49,11 @@ const buildAnswers = (data: PortfolioData): Record<string, { chip: string; node:
             href={p.link || p.github_url}
             title={p.title}
             sub={p.description}
-            links={[p.link && p.link !== p.github_url ? "Live ↗" : "", p.github_url ? "GitHub ↗" : ""].filter(Boolean)}
+            links={[p.link && p.link !== p.github_url ? "Live ↗︎" : "", p.github_url ? "GitHub ↗︎" : ""].filter(Boolean)}
           />
         ))}
         <p style={{ marginTop: 10 }}>
-          More on <Tx href={data.footer.github_link}>GitHub ↗</Tx>.
+          More on <Tx href={data.footer.github_link}>GitHub ↗︎</Tx>.
         </p>
       </>
     ),
@@ -93,10 +93,10 @@ const buildAnswers = (data: PortfolioData): Record<string, { chip: string; node:
       <>
         <p>{data.writings.length} pieces — agents, APIs, and databases:</p>
         {data.writings.map((w) => (
-          <Card key={w.link} href={w.link} title={w.title} sub={`${w.published_date} · ${w.time_to_read}`} links={["Read ↗"]} />
+          <Card key={w.link} href={w.link} title={w.title} sub={`${w.published_date} · ${w.time_to_read}`} links={["Read ↗︎"]} />
         ))}
         <p style={{ marginTop: 10 }}>
-          More on <Tx href={data.footer.devto_link}>dev.to ↗</Tx> and <Tx href={data.footer.medium_link}>Medium ↗</Tx>.
+          More on <Tx href={data.footer.devto_link}>dev.to ↗︎</Tx> and <Tx href={data.footer.medium_link}>Medium ↗︎</Tx>.
         </p>
       </>
     ),
@@ -123,11 +123,11 @@ const buildAnswers = (data: PortfolioData): Record<string, { chip: string; node:
     node: (
       <>
         <p>Pick a channel:</p>
-        <Card href={`mailto:${data.contact.email}`} title="Email" sub={data.contact.email} links={["Write ↗"]} />
-        <Card href={data.contact.github_link} title="GitHub" sub="stenwire" links={["Open ↗"]} />
-        <Card href={data.contact.linkedin_link} title="LinkedIn" sub="stephen-nwankwo" links={["Open ↗"]} />
-        <Card href={data.contact.x_link} title="X" sub="@Sage_Sten" links={["Open ↗"]} />
-        <Card href={data.footer.resume_link} title="Résumé" sub="PDF" links={["Open ↗"]} />
+        <Card href={`mailto:${data.contact.email}`} title="Email" sub={data.contact.email} links={["Write ↗︎"]} />
+        <Card href={data.contact.github_link} title="GitHub" sub="stenwire" links={["Open ↗︎"]} />
+        <Card href={data.contact.linkedin_link} title="LinkedIn" sub="stephen-nwankwo" links={["Open ↗︎"]} />
+        <Card href={data.contact.x_link} title="X" sub="@Sage_Sten" links={["Open ↗︎"]} />
+        <Card href={data.footer.resume_link} title="Résumé" sub="PDF" links={["Open ↗︎"]} />
       </>
     ),
   },
@@ -163,7 +163,7 @@ const AgentWidget = () => {
       <>
         <p>
           Hi — I'm <b>STEN</b>, a scripted guide to {data.hero.name}. No AI calls here — the real agentic work lives in{" "}
-          <Tx href="https://taimakoai.onrender.com">Taimako.AI ↗</Tx>.
+          <Tx href="https://taimakoai.onrender.com">Taimako.AI ↗︎</Tx>.
         </p>
         <p>Ask me anything about him, or tap a suggestion below.</p>
       </>
@@ -215,7 +215,7 @@ const AgentWidget = () => {
         aria-expanded={open}
         aria-label="Chat with STEN, a scripted guide to Stephen"
       >
-        {open ? "×" : "✳"}
+        {open ? "×" : "✳︎"}
       </button>
 
       {open && (

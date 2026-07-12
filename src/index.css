@@ -421,17 +421,25 @@
   }
 
   .st-xp {
+    padding: 1.6vh 0;
+    border-bottom: 1px solid var(--s-line);
+    cursor: pointer;
+  }
+  .st-xp .xhead {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 18px;
-    padding: 1.6vh 0;
-    border-bottom: 1px solid var(--s-line);
   }
   .st-xp .xo {
     font-size: clamp(17px, 2.2vw, 30px);
     font-weight: 600;
     letter-spacing: -0.02em;
+    transition: color 0.2s ease;
+  }
+  .st-xp:hover .xo,
+  .st-xp.on .xo {
+    color: var(--s-acc);
   }
   .st-xp .xo small {
     font-size: 0.62em;
@@ -444,6 +452,47 @@
     font-size: 10px;
     color: var(--s-mut);
     white-space: nowrap;
+  }
+  .xplus {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--s-mut);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease;
+  }
+  .st-xp:hover .xplus,
+  .st-xp.on .xplus {
+    color: var(--s-acc);
+  }
+  .st-xp.on .xplus {
+    transform: rotate(45deg);
+  }
+  .xp-det {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease 0.1s;
+  }
+  .st-xp.on .xp-det {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  .xp-det > div {
+    overflow: hidden;
+  }
+  .xp-det ul {
+    margin: 14px 0 6px;
+    padding-left: 18px;
+    max-width: 72ch;
+    color: var(--s-mut);
+    font-size: clamp(13px, 1.2vw, 15px);
+  }
+  .xp-det li {
+    margin-bottom: 6px;
+  }
+  .xp-det li::marker {
+    color: var(--s-acc);
   }
 
   .st-cta {
@@ -749,6 +798,8 @@
   @media (prefers-reduced-motion: reduce) {
     .rv,
     .st-det,
+    .xp-det,
+    .xplus,
     .st-proj .nm .title,
     .float-art,
     .wg-btn,

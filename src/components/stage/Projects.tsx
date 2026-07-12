@@ -59,17 +59,17 @@ const Projects = () => {
                       <span className="lks">
                         {showLive && (
                           <a href={p.link} target="_blank" rel="noopener noreferrer">
-                            Live site ↗
+                            Live site ↗︎
                           </a>
                         )}
                         {p.github_url && (
                           <a href={p.github_url} target="_blank" rel="noopener noreferrer">
-                            GitHub ↗
+                            GitHub ↗︎
                           </a>
                         )}
                         {!showLive && !p.github_url && p.link && (
                           <a href={p.link} target="_blank" rel="noopener noreferrer">
-                            View ↗
+                            View ↗︎
                           </a>
                         )}
                         <span className="tl">{p.tools.join(" · ")}</span>
@@ -86,7 +86,7 @@ const Projects = () => {
       <Reveal>
         <div className="st-more">
           <a href={data.footer.github_link} target="_blank" rel="noopener noreferrer">
-            More projects on GitHub ↗
+            More projects on GitHub ↗︎
           </a>
         </div>
       </Reveal>

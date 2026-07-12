@@ -43,6 +43,7 @@ interface ExperienceData {
   job_title: string;
   organization: string;
   description: string;
+  highlights: string[];
   start_date: string;
   end_date: string;
 }
