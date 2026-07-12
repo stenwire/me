@@ -63,7 +63,7 @@ const Hero = () => {
           </button>{" "}
           — {data.hero.sub_heading}
         </p>
-        <span className="scroll-hint mn">Scroll ↓</span>
+        <span className="scroll-hint mn">Scroll ↓︎</span>
       </div>
 
       {card}

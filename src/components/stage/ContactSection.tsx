@@ -24,7 +24,7 @@ const ContactSection = () => {
       <section className="st-cta" id="contact">
         <Reveal>
           <a className="big" href={`mailto:${data.contact.email}`}>
-            Let's talk ↗
+            Let's talk ↗︎
           </a>
         </Reveal>
       </section>

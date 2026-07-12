@@ -42,7 +42,7 @@ const Writing = () => {
                 <span className="wt">{w.title}</span>
               </span>
               <span className="wm">
-                {w.published_date} · {sourceOf(w.link)} ↗
+                {w.published_date} · {sourceOf(w.link)} ↗︎
               </span>
             </a>
           </Reveal>
@@ -52,10 +52,10 @@ const Writing = () => {
       <Reveal>
         <div className="st-more">
           <a href={data.footer.devto_link} target="_blank" rel="noopener noreferrer">
-            More articles on dev.to ↗
+            More articles on dev.to ↗︎
           </a>
           <a href={data.footer.medium_link} target="_blank" rel="noopener noreferrer">
-            More on Medium ↗
+            More on Medium ↗︎
           </a>
         </div>
       </Reveal>

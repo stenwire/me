@@ -122,13 +122,27 @@
       "job_title": "Product Engineer",
       "organization": "Venco Africa",
       "description": "Built an AI Agent that supported the customer experience team and increased ticket resolution rate by 40%, while optimizing database queries and streamlining new staff onboarding. These improvements significantly enhanced team efficiency, reduced response times, and accelerated staff productivity.",
+      "highlights": [
+        "Architected and deployed an AI support agent assisting ~110 daily tickets using Gemini and OpenAI models.",
+        "Built FastAPI microservices powering AI workflows, knowledge retrieval, and internal automation.",
+        "Implemented a Redis caching layer for conversation history, reducing database load and improving response performance.",
+        "Containerized AI services with Docker, published images via GHCR, and deployed to cloud VMs / EC2.",
+        "Owned and developed the Vendkit platform facilitating vending operations for businesses — dashboard, API, and team management.",
+        "Built CRM-style operational tools and optimized Frappe/ERPNext backend queries and data extraction pipelines."
+      ],
       "start_date": "February 2025",
       "end_date": "Present"
     },
     {
-      "job_title": "Backend Developer",
+      "job_title": "Backend Engineer",
       "organization": "Cospire",
       "description": "Designed an efficient onboarding system that boosted client efficiency by 75%, along with a secure payment flow and smart booking logic that increased reservations by 30%. These improvements significantly enhanced user experience, operational speed, and revenue generation.",
+      "highlights": [
+        "Designed and built an automated workspace onboarding platform, improving client onboarding efficiency by 75%.",
+        "Implemented secure and scalable payment processing flows, increasing reliability and customer trust.",
+        "Engineered booking engine logic, increasing successful reservations by 30% and reducing processing latency by 20%.",
+        "Developed and maintained backend APIs powering production web and mobile applications."
+      ],
       "start_date": "April 2024",
       "end_date": "January 2025"
     },
@@ -136,6 +150,12 @@
       "job_title": "Backend Engineer",
       "organization": "Upnyx",
       "description": "Engineered AI agents for marketing and research, built secure RESTful services for fintech applications, and mentored junior developers to boost their efficiency by 60%. These efforts enhanced team productivity, delivered intelligent automation tools, and strengthened core fintech infrastructure.",
+      "highlights": [
+        "Developed AI agents for marketing automation, research assistance, and content generation.",
+        "Built a real-time conversational AI chat system enabling interactive AI workflows.",
+        "Developed backend infrastructure supporting AI-powered services using Django and PostgreSQL.",
+        "Mentored junior developers and introduced backend best practices, improving team productivity."
+      ],
       "start_date": "September 2022",
       "end_date": "April 2024"
     },
@@ -143,6 +163,12 @@
       "job_title": "Backend Engineer",
       "organization": "SoftDrop",
       "description": "Implemented a secure KYC service for compliant customer onboarding, a high-performance booking system with 42% faster response times, and a robust media upload service for handling large-scale files. These enhancements improved user satisfaction, data security, and overall system reliability.",
+      "highlights": [
+        "Implemented secure KYC onboarding systems, ensuring regulatory compliance and user verification.",
+        "Optimized backend booking infrastructure, improving performance by 42%.",
+        "Built secure media upload and storage pipelines capable of handling large-scale file uploads.",
+        "Developed backend APIs supporting customer-facing platform features."
+      ],
       "start_date": "February 2021",
       "end_date": "May 2022"
     }
