@@ -6,6 +6,7 @@ import Writing from "@/components/stage/Writing";
 import Experience from "@/components/stage/Experience";
 import ContactSection from "@/components/stage/ContactSection";
 import AgentWidget from "@/components/stage/AgentWidget";
+import ThemeToggle from "@/components/stage/ThemeToggle";
 
 const Index = () => {
   const { isLoading } = usePortfolioData();
@@ -20,6 +21,7 @@ const Index = () => {
 
   return (
     <main className="st-wrap">
+      <ThemeToggle />
       <Hero />
       <Projects />
       <Writing />

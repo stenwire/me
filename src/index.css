@@ -595,6 +595,93 @@
     }
   }
 
+  /* ── theme transition: time-lapse sunset/sunrise ── */
+  .theme-xition,
+  .theme-xition *,
+  .theme-xition *::before,
+  .theme-xition *::after {
+    transition: background-color 1s ease, color 1s ease, border-color 1s ease,
+      fill 1s ease, stroke 1s ease, box-shadow 1s ease !important;
+  }
+
+  .sky-wash {
+    position: fixed;
+    inset: 0;
+    z-index: 44;
+    pointer-events: none;
+    opacity: 0;
+    animation: sky-wash 1.4s ease both;
+  }
+  .sky-wash.dusk {
+    background: linear-gradient(
+      to top,
+      rgba(255, 138, 56, 0.5),
+      rgba(146, 78, 156, 0.42) 45%,
+      rgba(28, 26, 56, 0.55)
+    );
+  }
+  .sky-wash.dawn {
+    background: linear-gradient(
+      to top,
+      rgba(255, 196, 92, 0.5),
+      rgba(255, 228, 176, 0.38) 45%,
+      rgba(168, 205, 255, 0.42)
+    );
+  }
+  @keyframes sky-wash {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* ── theme toggle ── */
+  .theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 46;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--s-card);
+    border: 1px solid var(--s-line);
+    color: var(--s-mut);
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .theme-btn:hover {
+    color: var(--s-acc);
+    border-color: var(--s-acc);
+    transform: rotate(15deg) scale(1.08);
+  }
+  .theme-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+  .theme-toast {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 46;
+    max-width: 250px;
+    padding: 10px 14px;
+    background: var(--s-card);
+    border: 1px solid var(--s-line);
+    color: var(--s-ink);
+    font-size: 11px;
+    line-height: 1.5;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+    animation: pin-in 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
   /* ── agent widget ── */
   .wg-btn {
     position: fixed;
@@ -813,9 +900,23 @@
     .ag-typing i {
       animation: none;
     }
+    .theme-btn {
+      transition: none;
+    }
     .wg-panel,
-    .portrait-pin {
+    .portrait-pin,
+    .theme-toast,
+    .sky-wash {
       animation: none;
+    }
+    .sky-wash {
+      display: none;
+    }
+    .theme-xition,
+    .theme-xition *,
+    .theme-xition *::before,
+    .theme-xition *::after {
+      transition: none !important;
     }
   }
 }
