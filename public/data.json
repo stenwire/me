@@ -42,13 +42,13 @@
         "AWS"
       ],
       "link": "https://taimako-your-ai-whatsapp-partner.onrender.com/",
-      "github_url": "https://github.com/stenwire/Taimako.AI",
+      "github_url": "https://github.com/stenwire/TaimakoAI",
       "category": "AI Support Platform",
       "tagline": "Context-aware support, without the copy-paste chat-widget feel"
     },
     {
       "title": "Blug",
-      "description": "A blog management system for developers and technical writers — a \"bring your own UI\" alternative to Hashnode, Medium, and Dev.to, with fine-grained search, tagging, and categories exposed through API keys. Co-built with Ayodeji Adeoti.",
+      "description": "A blog management system for developers and technical writers — a \"bring your own UI\" alternative to Hashnode, Medium, and Dev.to, with fine-grained search, tagging, and categories exposed through API keys.",
       "tools": [
         "Django",
         "Cloudflare",
@@ -61,7 +61,7 @@
       "tagline": "Your blog's engine, your own UI"
     },
     {
-      "title": "Car Booking API",
+      "title": "Auto2GO API",
       "description": "Developed a high-performance vehicle reservation system with real-time availability tracking, secure payment processing, and driver management features.",
       "tools": [
         "Python",

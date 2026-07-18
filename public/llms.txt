@@ -45,7 +45,7 @@ Implemented a secure KYC service, a high-performance booking system with 42% fas
 AI-powered customer support platform using an agentic RAG engine. Processes knowledge base documents to provide accurate, context-aware responses via an embeddable chat widget or WhatsApp. Features a business dashboard, human escalation, and subscription billing.
 - Stack: Next.js, FastAPI, Google ADK, RAG, Docker, AWS
 - Live: https://taimako-your-ai-whatsapp-partner.onrender.com/
-- GitHub: https://github.com/stenwire/Taimako.AI
+- GitHub: https://github.com/stenwire/TaimakoAI
 
 ### Vendkit.IO
 Smart vending platform that enables businesses, landlords, and property managers to automate and manage prepaid utilities like electricity, water, and gas.
@@ -57,7 +57,7 @@ Intelligent assistant built with Google's ADK providing contextual farming guida
 - Stack: Python, Google ADK, RAG
 - GitHub: https://github.com/stenwire/NaijaFarmHand-Agent
 
-### Car Booking API
+### Auto2GO API
 High-performance vehicle reservation system with real-time availability tracking, secure payment processing, and driver management.
 - Stack: Python, Django, Redis, Docker, AWS
 - GitHub: https://github.com/stenwire/AutoGo
