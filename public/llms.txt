@@ -1,6 +1,6 @@
 # Stephen Nwankwo
 
-> Software and AI Engineer based in Lagos, Nigeria. I design and build thoughtful products that prioritize clarity, usability, and meaningful interactions. Deeply passionate about solving global challenges through impactful technology solutions.
+> Software Engineer based in Lagos, Nigeria, working close to the metal — backends, infrastructure, and the reliability underneath. Works by the Shokunin (職人) principle: craft for its own sake, not for applause.
 
 ## About
 
@@ -28,7 +28,7 @@
 ## Experience
 
 ### Product Engineer — Venco Africa (February 2025 – Present)
-Built an AI Agent that supported the customer experience team and increased ticket resolution rate by 40%. Optimized database queries and streamlined new staff onboarding, significantly enhancing team efficiency, reducing response times, and accelerating staff productivity.
+Built an AI Agent to support the customer experience team and increase ticket resolution rate by 40%, while optimizing database queries and building internal tooling. Optimized database queries and streamlined new staff onboarding, significantly enhancing team efficiency, reducing response times, and accelerating staff productivity.
 
 ### Backend Developer — Cospire (April 2024 – January 2025)
 Designed an efficient onboarding system that boosted client efficiency by 75%, along with a secure payment flow and smart booking logic that increased reservations by 30%.
@@ -44,7 +44,7 @@ Implemented a secure KYC service, a high-performance booking system with 42% fas
 ### Taimako.AI
 AI-powered customer support platform using an agentic RAG engine. Processes knowledge base documents to provide accurate, context-aware responses via an embeddable chat widget or WhatsApp. Features a business dashboard, human escalation, and subscription billing.
 - Stack: Next.js, FastAPI, Google ADK, RAG, Docker, AWS
-- Live: https://taimakoai.onrender.com
+- Live: https://taimako-your-ai-whatsapp-partner.onrender.com/
 - GitHub: https://github.com/stenwire/Taimako.AI
 
 ### Vendkit.IO

@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { usePortfolioData } from "@/hooks/usePortfolioData";
 import Hero from "@/components/stage/Hero";
-import Projects from "@/components/stage/Projects";
+import ProjectsBento from "@/components/stage/ProjectsBento";
 import Writing from "@/components/stage/Writing";
 import Experience from "@/components/stage/Experience";
+import Robotics from "@/components/stage/Robotics";
+import Special from "@/components/stage/Special";
 import ContactSection from "@/components/stage/ContactSection";
 import AgentWidget from "@/components/stage/AgentWidget";
 import ThemeToggle from "@/components/stage/ThemeToggle";
@@ -12,7 +14,7 @@ const Index = () => {
   const { isLoading } = usePortfolioData();
 
   useEffect(() => {
-    document.title = "Stephen Nwankwo — Software and AI Engineer";
+    document.title = "Stephen Nwankwo — Software Engineer";
   }, []);
 
   if (isLoading) {
@@ -23,9 +25,11 @@ const Index = () => {
     <main className="st-wrap">
       <ThemeToggle />
       <Hero />
-      <Projects />
-      <Writing />
+      <ProjectsBento />
       <Experience />
+      <Robotics />
+      <Special />
+      <Writing />
       <ContactSection />
       <AgentWidget />
     </main>

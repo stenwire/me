@@ -86,6 +86,16 @@ export const ART: Record<string, JSX.Element> = {
       <path d="M34 22 h20 M34 32 h20 M34 42 h12" stroke={acc} />
     </svg>
   ),
+  robot: (
+    <svg viewBox="0 0 160 110" {...stroke}>
+      <path d="M30 96 L34 58 C36 44 48 34 62 34 h10" />
+      <path d="M72 34 C86 34 98 44 100 58 L104 96" />
+      <circle cx="72" cy="20" r="12" fill={acc} stroke="none" />
+      <path d="M72 32 v10" />
+      <circle cx="42" cy="96" r="8" />
+      <circle cx="92" cy="96" r="8" />
+    </svg>
+  ),
 };
 
 export const projectArt = (title: string): JSX.Element => {
@@ -94,8 +104,11 @@ export const projectArt = (title: string): JSX.Element => {
   if (t.includes("vend")) return ART.vendkit;
   if (t.includes("car") || t.includes("booking")) return ART.autogo;
   if (t.includes("farm")) return ART.farmhand;
+  if (t.includes("blug")) return ART.doc;
   return ART.agents;
 };
+
+export const roboticsArt = (): JSX.Element => ART.robot;
 
 export const writingArt = (title: string): JSX.Element => {
   const t = title.toLowerCase();
