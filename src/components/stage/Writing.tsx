@@ -1,7 +1,6 @@
 import { usePortfolioData } from "@/hooks/usePortfolioData";
 import Reveal from "./Reveal";
-import { writingArt } from "./illustrations";
-import { useFloatCard } from "./useFloatCard";
+import SectionIntro from "./SectionIntro";
 
 const sourceOf = (link: string): string => {
   if (link.includes("towards-artificial-intelligence")) return "Towards AI";
@@ -12,42 +11,43 @@ const sourceOf = (link: string): string => {
 
 const Writing = () => {
   const { data } = usePortfolioData();
-  const { setContent, card } = useFloatCard();
 
   if (!data) return null;
 
-  return (
-    <section className="st-sec" id="writing">
-      <Reveal>
-        <div className="st-lab mn">
-          <span>Writing</span>
-          <span>{String(data.writings.length).padStart(2, "0")}</span>
-        </div>
-      </Reveal>
+  const row = (dir: "a" | "b") => (
+    <div className={`mq-row ${dir}`}>
+      {[...data.writings, ...data.writings].map((w, i) => (
+        <a
+          key={`${dir}-${i}`}
+          className={`mq-item ${i >= data.writings.length ? "mq-dup" : ""}`}
+          href={w.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-hidden={i >= data.writings.length}
+          tabIndex={i >= data.writings.length ? -1 : 0}
+        >
+          <span className="mq-t">{w.title}</span>
+          <span className="mq-m mn">
+            {w.published_date} · {sourceOf(w.link)} ↗︎
+          </span>
+        </a>
+      ))}
+    </div>
+  );
 
-      {data.writings.map((w) => {
-        const art = writingArt(w.title);
-        return (
-          <Reveal key={w.link}>
-            <a
-              className="st-wr"
-              href={w.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              onMouseEnter={() => setContent(art)}
-              onMouseLeave={() => setContent(null)}
-            >
-              <span className="wl">
-                <span className="ico">{art}</span>
-                <span className="wt">{w.title}</span>
-              </span>
-              <span className="wm">
-                {w.published_date} · {sourceOf(w.link)} ↗︎
-              </span>
-            </a>
-          </Reveal>
-        );
-      })}
+  return (
+    <section className="st-sec wr-sec" id="writing">
+      <SectionIntro
+        label="Writing"
+        count={data.writings.length}
+        statement="I also write"
+        sub="Field notes on the systems I build, break, and rebuild — agents, APIs, and the databases underneath."
+      />
+
+      <div className="mq" aria-label="Selected writing">
+        {row("a")}
+        {row("b")}
+      </div>
 
       <Reveal>
         <div className="st-more">
@@ -59,8 +59,6 @@ const Writing = () => {
           </a>
         </div>
       </Reveal>
-
-      {card}
     </section>
   );
 };

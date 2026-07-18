@@ -1,14 +1,14 @@
 {
   "hero": {
-    "job_title": "Software and AI Engineer",
+    "job_title": "Software Engineer",
     "name": "Stephen Nwankwo",
-    "heading": "Software<br />& AI engineer<span class=\"dot\">.</span>",
-    "sub_heading": "building agentic systems and the backends beneath them. Lagos, Nigeria.",
+    "heading": "Software<br />engineer<span class=\"dot\">.</span>",
+    "sub_heading": "a systems engineer working close to the metal — backends, infra, and the reliability underneath. Shokunin (職人) at heart. Lagos, Nigeria.",
     "profile_image": "/me.jpeg",
     "logo_url": "https://i.ibb.co/mVCbgMM5/K-1.png"
   },
   "about": {
-    "about_content": "I am deeply passionate about solving global challenges through impactful technology solutions. I build with intention, purpose and passion. I build to solve, improve and elevate.",
+    "about_content": "I work close to the metal — backends, infrastructure, the parts that keep a system reliable when no one's watching. That's the Shokunin (職人) way: craft for its own sake, not for applause.",
     "location": "Lagos, Nigeria"
   },
   "stack": {
@@ -41,8 +41,24 @@
         "Docker",
         "AWS"
       ],
-      "link": "https://taimakoai.onrender.com",
-      "github_url": "https://github.com/stenwire/Taimako.AI"
+      "link": "https://taimako-your-ai-whatsapp-partner.onrender.com/",
+      "github_url": "https://github.com/stenwire/Taimako.AI",
+      "category": "AI Support Platform",
+      "tagline": "Context-aware support, without the copy-paste chat-widget feel"
+    },
+    {
+      "title": "Blug",
+      "description": "A blog management system for developers and technical writers — a \"bring your own UI\" alternative to Hashnode, Medium, and Dev.to, with fine-grained search, tagging, and categories exposed through API keys. Co-built with Ayodeji Adeoti.",
+      "tools": [
+        "Django",
+        "Cloudflare",
+        "AWS",
+        "Redis"
+      ],
+      "link": "https://blug.io",
+      "github_url": "",
+      "category": "Blogging Platform",
+      "tagline": "Your blog's engine, your own UI"
     },
     {
       "title": "Car Booking API",
@@ -55,7 +71,9 @@
         "AWS"
       ],
       "link": "https://github.com/stenwire/AutoGo",
-      "github_url": "https://github.com/stenwire/AutoGo"
+      "github_url": "https://github.com/stenwire/AutoGo",
+      "category": "Backend API",
+      "tagline": "Real-time availability, without the race conditions"
     },
     {
       "title": "Vendkit.IO",
@@ -66,7 +84,9 @@
         "React"
       ],
       "link": "https://vendkit.io/",
-      "github_url": ""
+      "github_url": "",
+      "category": "Utilities Platform",
+      "tagline": "Prepaid utilities, automated end to end"
     },
     {
       "title": "NaijaFarmHand - AI Agent",
@@ -77,7 +97,9 @@
         "RAG"
       ],
       "link": "https://github.com/stenwire/NaijaFarmHand-Agent",
-      "github_url": "https://github.com/stenwire/NaijaFarmHand-Agent"
+      "github_url": "https://github.com/stenwire/NaijaFarmHand-Agent",
+      "category": "AI Agent",
+      "tagline": "Farming guidance grounded in local context"
     }
   ],
   "writings": [
@@ -121,7 +143,7 @@
     {
       "job_title": "Product Engineer",
       "organization": "Venco Africa",
-      "description": "Built an AI Agent that supported the customer experience team and increased ticket resolution rate by 40%, while optimizing database queries and streamlining new staff onboarding. These improvements significantly enhanced team efficiency, reduced response times, and accelerated staff productivity.",
+      "description": "Built an AI Agent to support the customer experience team and increase ticket resolution rate by 40%, while optimizing database queries and building internal tooling. These improvements significantly enhanced team efficiency, reduced response times, and accelerated staff productivity.",
       "highlights": [
         "Architected and deployed an AI support agent assisting ~110 daily tickets using Gemini and OpenAI models.",
         "Built FastAPI microservices powering AI workflows, knowledge retrieval, and internal automation.",
@@ -131,7 +153,8 @@
         "Built CRM-style operational tools and optimized Frappe/ERPNext backend queries and data extraction pipelines."
       ],
       "start_date": "February 2025",
-      "end_date": "Present"
+      "end_date": "Present",
+      "tags": ["Gemini", "OpenAI", "FastAPI", "Redis", "Docker", "Frappe"]
     },
     {
       "job_title": "Backend Engineer",
@@ -157,7 +180,8 @@
         "Mentored junior developers and introduced backend best practices, improving team productivity."
       ],
       "start_date": "September 2022",
-      "end_date": "April 2024"
+      "end_date": "April 2024",
+      "tags": ["Django", "PostgreSQL"]
     },
     {
       "job_title": "Backend Engineer",
@@ -171,6 +195,59 @@
       ],
       "start_date": "February 2021",
       "end_date": "May 2022"
+    }
+  ],
+  "robotics": [
+    {
+      "title": "Machine Vision Robotic Arm",
+      "description": "Final-year robotics project combining computer vision and arm control — a custom-trained detector for locating objects, camera calibration, and forward/inverse kinematics driving an Arduino-controlled robotic arm in real time.",
+      "tools": ["Python", "C++", "OpenCV", "Arduino", "Kinematics"],
+      "link": "",
+      "github_url": "https://github.com/stenwire/Machine-Vision-Robotic-Arm"
+    },
+    {
+      "title": "Petrol Station Queue Length Optimization",
+      "description": "Coursework modeling petrol station wait times — time-series analysis, VAR, and LSTM forecasting to help operators predict congestion, staff peak hours, and cut queue lengths.",
+      "tools": ["Python", "Jupyter", "LSTM", "VAR"],
+      "link": "",
+      "github_url": "https://github.com/stenwire/Petrol-Station-Queue-Length-Optimization"
+    },
+    {
+      "title": "ROS2 Robotics Lab",
+      "description": "Dockerized ROS2 Humble setup with Gazebo Harmonic and TurtleBot3 — a hands-on workshop environment for running robotics simulations cross-platform with no local ROS install needed.",
+      "tools": ["ROS2", "Docker", "Gazebo", "TurtleBot3"],
+      "link": "",
+      "github_url": "https://github.com/stenwire/ros2-robotics-lab"
+    },
+    {
+      "title": "Basic MATLAB SLAM",
+      "description": "SLAM (Simultaneous Localization and Mapping) coursework in MATLAB — offline processing with visualization of floor-plan mapping and trajectory optimization.",
+      "tools": ["MATLAB", "SLAM"],
+      "link": "",
+      "github_url": "https://github.com/UNN-MCT-Robotics/Basic-Matlab-SLAM"
+    },
+    {
+      "title": "Robotic Arm Kinematics Simulator",
+      "description": "A web-based simulator for visualizing forward and inverse kinematics on a robotic arm model, built to make the underlying math tangible and interactive.",
+      "tools": ["Kinematics", "Simulation"],
+      "link": "",
+      "github_url": ""
+    }
+  ],
+  "special": [
+    {
+      "title": "ffmpeg-video-writer",
+      "description": "A Python wrapper around FFmpeg that builds video files from image sequences.",
+      "tools": ["Python", "FFmpeg"],
+      "link": "",
+      "github_url": "https://github.com/stenwire/ffmpeg-video-writer"
+    },
+    {
+      "title": "speech-diarizer",
+      "description": "A CLI that transcribes audio with speaker diarization — who spoke when, down to word-level timing.",
+      "tools": ["Python", "Vosk"],
+      "link": "",
+      "github_url": "https://github.com/stenwire/speech-diarizer"
     }
   ],
   "contact": {

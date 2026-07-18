@@ -118,6 +118,41 @@ const buildAnswers = (data: PortfolioData): Record<string, { chip: string; node:
       </>
     ),
   },
+  robotics: {
+    chip: "Any robotics/research work?",
+    node: (
+      <>
+        <p>Academic and robotics side of things:</p>
+        {data.robotics.map((p) =>
+          p.link || p.github_url ? (
+            <Card
+              key={p.title}
+              href={p.link || p.github_url}
+              title={p.title}
+              sub={p.description}
+              links={[p.link && p.link !== p.github_url ? "Live ↗︎" : "", p.github_url ? "GitHub ↗︎" : ""].filter(Boolean)}
+            />
+          ) : (
+            <div key={p.title} className="ag-card">
+              <span className="ct">{p.title}</span>
+              <span className="cd">{p.description}</span>
+            </div>
+          )
+        )}
+      </>
+    ),
+  },
+  special: {
+    chip: "Any other tools?",
+    node: (
+      <>
+        <p>Small utilities worth a look:</p>
+        {data.special.map((p) => (
+          <Card key={p.title} href={p.github_url || p.link} title={p.title} sub={p.description} links={["GitHub ↗︎"]} />
+        ))}
+      </>
+    ),
+  },
   contact: {
     chip: "How do I reach him?",
     node: (
@@ -137,7 +172,9 @@ const matchKey = (text: string): string | null => {
   const s = text.toLowerCase();
   if (/(stack|tech|tool|language|python|typescript|django|fastapi|framework|skill|database|cloud|devops)/.test(s)) return "stack";
   if (/(role|hire|hiring|position|fit|job|team|remote|contract|available|opening)/.test(s)) return "roles";
-  if (/(project|built|build|work on|portfolio|app|taimako|vendkit)/.test(s)) return "projects";
+  if (/(project|built|build|work on|portfolio|app|taimako|vendkit|blug)/.test(s)) return "projects";
+  if (/(robot|robotics|slam|matlab|kinematics|ros2?|vision|queue|simulator|arduino)/.test(s)) return "robotics";
+  if (/(ffmpeg|diarizer|diarization|speech|video writer)/.test(s)) return "special";
   if (/(write|writing|article|blog|post|read)/.test(s)) return "writing";
   if (/(experience|history|career|venco|cospire|upnyx|softdrop)/.test(s)) return "experience";
   if (/(contact|email|reach|talk|resume|résumé|cv|linkedin)/.test(s)) return "contact";
@@ -163,7 +200,7 @@ const AgentWidget = () => {
       <>
         <p>
           Hi — I'm <b>STEN</b>, a scripted guide to {data.hero.name}. No AI calls here — the real agentic work lives in{" "}
-          <Tx href="https://taimakoai.onrender.com">Taimako.AI ↗︎</Tx>.
+          <Tx href="https://taimako-your-ai-whatsapp-partner.onrender.com/">Taimako.AI ↗︎</Tx>.
         </p>
         <p>Ask me anything about him, or tap a suggestion below.</p>
       </>
@@ -200,7 +237,8 @@ const AgentWidget = () => {
       ) : (
         <p>
           I keep it simple (I'm scripted, remember) — ask me about Stephen's <b>projects</b>, <b>tech stack</b>,{" "}
-          <b>roles</b>, <b>writing</b>, <b>experience</b>, or how to <b>contact</b> him.
+          <b>roles</b>, <b>writing</b>, <b>experience</b>, <b>robotics work</b>, <b>other tools</b>, or how to{" "}
+          <b>contact</b> him.
         </p>
       )
     );

@@ -35,34 +35,44 @@ const Hero = () => {
     <section className="st-hero">
       <h1 dangerouslySetInnerHTML={{ __html: data.hero.heading }} />
       <div className="under">
-        <p>
-          <button
-            type="button"
-            className="hero-name"
-            onMouseEnter={() => !pinned && setContent(portrait)}
-            onMouseLeave={() => setContent(null)}
-            onClick={() => {
-              setContent(null);
-              setPinned((p) => !p);
-            }}
-            aria-label={`Show photo of ${data.hero.name}`}
-          >
-            {data.hero.name}
-          </button>
-          <button
-            type="button"
-            className="person-btn"
-            onClick={() => {
-              setContent(null);
-              setPinned((p) => !p);
-            }}
-            aria-label={`Show photo of ${data.hero.name}`}
-            aria-expanded={pinned}
-          >
-            <PersonIcon />
-          </button>{" "}
-          — {data.hero.sub_heading}
-        </p>
+        <div className="under-l">
+          <p>
+            <button
+              type="button"
+              className="hero-name"
+              onMouseEnter={() => !pinned && setContent(portrait)}
+              onMouseLeave={() => setContent(null)}
+              onClick={() => {
+                setContent(null);
+                setPinned((p) => !p);
+              }}
+              aria-label={`Show photo of ${data.hero.name}`}
+            >
+              {data.hero.name}
+            </button>
+            <button
+              type="button"
+              className="person-btn"
+              onClick={() => {
+                setContent(null);
+                setPinned((p) => !p);
+              }}
+              aria-label={`Show photo of ${data.hero.name}`}
+              aria-expanded={pinned}
+            >
+              <PersonIcon />
+            </button>{" "}
+            — {data.hero.sub_heading}
+          </p>
+          <div className="hero-actions">
+            <a className="hero-cta" href={`mailto:${data.contact.email}`}>
+              Let's talk <span aria-hidden="true">↗︎</span>
+            </a>
+            <a className="hero-cta ghost" href="#projects">
+              See the work
+            </a>
+          </div>
+        </div>
         <span className="scroll-hint mn">Scroll ↓︎</span>
       </div>
 

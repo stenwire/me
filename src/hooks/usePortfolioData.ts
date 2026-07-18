@@ -29,6 +29,8 @@ interface ProjectData {
   tools: string[];
   link: string;
   github_url: string;
+  category?: string;
+  tagline?: string;
 }
 
 interface WritingData {
@@ -46,6 +48,7 @@ interface ExperienceData {
   highlights: string[];
   start_date: string;
   end_date: string;
+  tags?: string[];
 }
 
 interface ContactData {
@@ -72,6 +75,8 @@ export interface PortfolioData {
   projects: ProjectData[];
   writings: WritingData[];
   experience: ExperienceData[];
+  robotics: ProjectData[];
+  special: ProjectData[];
   contact: ContactData;
   footer: FooterData;
 }

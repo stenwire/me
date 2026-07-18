@@ -72,8 +72,14 @@ const Projects = () => {
                             View ↗︎
                           </a>
                         )}
-                        <span className="tl">{p.tools.join(" · ")}</span>
                       </span>
+                      <div className="chips">
+                        {p.tools.map((t) => (
+                          <span className="chip" key={t}>
+                            {t}
+                          </span>
+                        ))}
+                      </div>
                     </span>
                   </div>
                 </div>
