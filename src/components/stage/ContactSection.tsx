@@ -51,7 +51,7 @@ const ContactSection = () => {
           </a>
         </div>
         <span>
-          {data.about.location} — <span className="mn">{time}</span>
+          {data.about.location} · <span className="mn">{time}</span>
         </span>
       </footer>
     </>

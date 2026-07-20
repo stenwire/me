@@ -1,6 +1,6 @@
 # Stephen Nwankwo
 
-> Software Engineer based in Lagos, Nigeria, working close to the metal — backends, infrastructure, and the reliability underneath. Works by the Shokunin (職人) principle: craft for its own sake, not for applause.
+> Software Engineer based in Lagos, Nigeria, working close to the metal: backends, infrastructure, and the reliability underneath. Works by the Shokunin (職人) principle: craft for its own sake, not for applause.
 
 ## About
 
@@ -27,16 +27,16 @@
 
 ## Experience
 
-### Product Engineer — Venco Africa (February 2025 – Present)
+### Product Engineer, Venco Africa (February 2025 – Present)
 Built an AI Agent to support the customer experience team and increase ticket resolution rate by 40%, while optimizing database queries and building internal tooling. Optimized database queries and streamlined new staff onboarding, significantly enhancing team efficiency, reducing response times, and accelerating staff productivity.
 
-### Backend Developer — Cospire (April 2024 – January 2025)
+### Backend Developer, Cospire (April 2024 – January 2025)
 Designed an efficient onboarding system that boosted client efficiency by 75%, along with a secure payment flow and smart booking logic that increased reservations by 30%.
 
-### Backend Engineer — Upnyx (September 2022 – April 2024)
+### Backend Engineer, Upnyx (September 2022 – April 2024)
 Engineered AI agents for marketing and research, built secure RESTful services for fintech applications, and mentored junior developers to boost their efficiency by 60%.
 
-### Backend Engineer — SoftDrop (February 2021 – May 2022)
+### Backend Engineer, SoftDrop (February 2021 – May 2022)
 Implemented a secure KYC service, a high-performance booking system with 42% faster response times, and a robust media upload service for handling large-scale files.
 
 ## Projects
@@ -52,7 +52,7 @@ Smart vending platform that enables businesses, landlords, and property managers
 - Stack: Frappe, Django Rest Framework, React
 - Live: https://vendkit.io/
 
-### NaijaFarmHand — AI Agent
+### NaijaFarmHand - AI Agent
 Intelligent assistant built with Google's ADK providing contextual farming guidance for Nigerian agriculture.
 - Stack: Python, Google ADK, RAG
 - GitHub: https://github.com/stenwire/NaijaFarmHand-Agent
@@ -64,8 +64,8 @@ High-performance vehicle reservation system with real-time availability tracking
 
 ## Writings
 
-- [Gen-Z Slang AI Translator with CopilotKit, ADK and RAG Grounding](https://medium.com/@nwankwostephen039/gen-z-slang-ai-translator-with-copilotkit-adk-and-rag-grounding-be4b2562a606) — Medium, October 2025
-- [Simple Rules to Follow When Building Multi-Agent Systems](https://medium.com/towards-artificial-intelligence/simple-rules-to-follow-when-building-multi-agent-systems-c7cbab686411) — Towards AI, 2025
-- [Learn Google ADK: Build a farming agent](https://dev.to/sten/learn-google-agent-adk-build-a-farming-agent-pc8) — Dev.to, April 2025
-- [Performance Testing: Is Your API Ready?](https://dev.to/sten/performance-testing-is-your-api-ready-for-real-world-traffic-4e9p) — Dev.to, January 2025
-- [Understanding Row-level Locking](https://dev.to/sten/understanding-row-level-locking-in-databases-2c8j) — Dev.to, October 2024
+- [Gen-Z Slang AI Translator with CopilotKit, ADK and RAG Grounding](https://medium.com/@nwankwostephen039/gen-z-slang-ai-translator-with-copilotkit-adk-and-rag-grounding-be4b2562a606) (Medium, October 2025)
+- [Simple Rules to Follow When Building Multi-Agent Systems](https://medium.com/towards-artificial-intelligence/simple-rules-to-follow-when-building-multi-agent-systems-c7cbab686411) (Towards AI, 2025)
+- [Learn Google ADK: Build a farming agent](https://dev.to/sten/learn-google-agent-adk-build-a-farming-agent-pc8) (Dev.to, April 2025)
+- [Performance Testing: Is Your API Ready?](https://dev.to/sten/performance-testing-is-your-api-ready-for-real-world-traffic-4e9p) (Dev.to, January 2025)
+- [Understanding Row-level Locking](https://dev.to/sten/understanding-row-level-locking-in-databases-2c8j) (Dev.to, October 2024)

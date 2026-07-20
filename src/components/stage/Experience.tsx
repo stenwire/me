@@ -18,7 +18,7 @@ const Experience = () => {
         label="Experience"
         count={data.experience.length}
         statement="I build with teams"
-        sub="Four companies since 2021 — backend systems, AI agents, and the infrastructure that keeps them honest."
+        sub="Four companies since 2021: backend systems, AI agents, and the infrastructure that keeps them honest."
       />
 
       <div className="tl">
@@ -26,7 +26,7 @@ const Experience = () => {
           <Reveal key={`${x.organization}-${x.start_date}`}>
             <article className="tl-node">
               <div className="tl-year mn">
-                {shortYear(x.start_date)} — {x.end_date === "Present" ? "NOW" : shortYear(x.end_date)}
+                {shortYear(x.start_date)} → {x.end_date === "Present" ? "NOW" : shortYear(x.end_date)}
               </div>
               <h3 className="tl-role">
                 {x.organization}

@@ -13,7 +13,7 @@ const Special = () => {
         label="Special Projects / Dev Tooling"
         count={data.special.length}
         statement="I build my own tools"
-        sub="Small command-line utilities I wrote to scratch a specific itch — then never stopped using."
+        sub="Small command-line utilities I wrote to scratch a specific itch, then never stopped using."
       />
 
       <div className="term-grid">
@@ -26,7 +26,7 @@ const Special = () => {
                   <span className="term-dot r" />
                   <span className="term-dot y" />
                   <span className="term-dot g" />
-                  <span className="fname">{s.title} — zsh</span>
+                  <span className="fname">{s.title} · zsh</span>
                 </div>
                 <div className="term-body">
                   <div className="term-cmd">

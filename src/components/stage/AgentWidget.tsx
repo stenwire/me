@@ -31,7 +31,7 @@ const buildAnswers = (data: PortfolioData): Record<string, { chip: string; node:
     node: (
       <>
         <p>
-          {data.hero.name} — {data.hero.job_title} in {data.about.location}, currently{" "}
+          {data.hero.name}, {data.hero.job_title} in {data.about.location}, currently{" "}
           {data.experience[0]?.job_title} at {data.experience[0]?.organization}.
         </p>
         <p>{data.about.about_content}</p>
@@ -91,7 +91,7 @@ const buildAnswers = (data: PortfolioData): Record<string, { chip: string; node:
     chip: "What does he write about?",
     node: (
       <>
-        <p>{data.writings.length} pieces — agents, APIs, and databases:</p>
+        <p>{data.writings.length} pieces on agents, APIs, and databases:</p>
         {data.writings.map((w) => (
           <Card key={w.link} href={w.link} title={w.title} sub={`${w.published_date} · ${w.time_to_read}`} links={["Read ↗︎"]} />
         ))}
@@ -109,7 +109,7 @@ const buildAnswers = (data: PortfolioData): Record<string, { chip: string; node:
         {data.experience.map((x) => (
           <p key={x.organization}>
             <b>
-              {x.organization} — {x.job_title}
+              {x.organization} · {x.job_title}
             </b>{" "}
             ({x.start_date} → {x.end_date})<br />
             {x.description}
@@ -199,7 +199,7 @@ const AgentWidget = () => {
     pushBot(
       <>
         <p>
-          Hi — I'm <b>STEN</b>, a scripted guide to {data.hero.name}. No AI calls here — the real agentic work lives in{" "}
+          Hi, I'm <b>STEN</b>, a scripted guide to {data.hero.name}. No AI calls here. The real agentic work lives in{" "}
           <Tx href="https://taimako-your-ai-whatsapp-partner.onrender.com/">Taimako.AI ↗︎</Tx>.
         </p>
         <p>Ask me anything about him, or tap a suggestion below.</p>
@@ -236,7 +236,7 @@ const AgentWidget = () => {
         answers[key].node
       ) : (
         <p>
-          I keep it simple (I'm scripted, remember) — ask me about Stephen's <b>projects</b>, <b>tech stack</b>,{" "}
+          I keep it simple (I'm scripted, remember). Ask me about Stephen's <b>projects</b>, <b>tech stack</b>,{" "}
           <b>roles</b>, <b>writing</b>, <b>experience</b>, <b>robotics work</b>, <b>other tools</b>, or how to{" "}
           <b>contact</b> him.
         </p>
@@ -257,9 +257,9 @@ const AgentWidget = () => {
       </button>
 
       {open && (
-        <div className="wg-panel" role="dialog" aria-label="STEN — scripted guide">
+        <div className="wg-panel" role="dialog" aria-label="STEN, scripted guide">
           <div className="ag-head">
-            <span className="nm">STEN — Stephen's guide</span>
+            <span className="nm">STEN · Stephen's guide</span>
             <span className="st mn">Scripted demo · no AI</span>
           </div>
           <div className="ag-msgs" ref={msgsRef}>

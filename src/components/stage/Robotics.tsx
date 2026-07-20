@@ -13,7 +13,7 @@ const Robotics = () => {
         label="Robotics & Academic"
         count={data.robotics.length}
         statement="I also build robots"
-        sub="Where software meets the physical — machine vision, kinematics, SLAM, and simulation from my academic work."
+        sub="Where software meets the physical: machine vision, kinematics, SLAM, and simulation from my academic work."
       />
 
       <div className="lab-grid">

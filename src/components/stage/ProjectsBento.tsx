@@ -15,7 +15,7 @@ const ProjectsBento = () => {
         label="Projects"
         count={data.projects.length}
         statement="I ship systems"
-        sub="From a blank repo to real users — AI support, prepaid-utility billing, booking engines, and the backends underneath."
+        sub="From a blank repo to real users: AI support, prepaid-utility billing, booking engines, and the backends underneath."
       />
 
       <div className="bento-grid">
