@@ -3,12 +3,12 @@
     "job_title": "Software Engineer",
     "name": "Stephen Nwankwo",
     "heading": "Software<br />engineer<span class=\"dot\">.</span>",
-    "sub_heading": "a systems engineer working close to the metal — backends, infra, and the reliability underneath. Shokunin (職人) at heart. Lagos, Nigeria.",
+    "sub_heading": "a systems engineer working close to the metal: backends, infra, and the reliability underneath. Shokunin (職人) at heart. Lagos, Nigeria.",
     "profile_image": "/me.jpeg",
     "logo_url": "https://i.ibb.co/mVCbgMM5/K-1.png"
   },
   "about": {
-    "about_content": "I work close to the metal — backends, infrastructure, the parts that keep a system reliable when no one's watching. That's the Shokunin (職人) way: craft for its own sake, not for applause.",
+    "about_content": "I work close to the metal: backends, infrastructure, the parts that keep a system reliable when no one's watching. That's the Shokunin (職人) way: craft for its own sake, not for applause.",
     "location": "Lagos, Nigeria"
   },
   "stack": {
@@ -23,12 +23,12 @@
     ]
   },
   "roles": [
-    "AI Engineer — LLM-powered products, RAG pipelines, agentic systems (LangChain, Google ADK)",
-    "Backend Engineer — high-performance APIs and microservices (Django, FastAPI, Node.js)",
-    "Product Engineer — owning features end to end, from data model to dashboard",
-    "Platform Engineer — Frappe / ERPNext customization and integrations"
+    "AI Engineer: LLM-powered products, RAG pipelines, agentic systems (LangChain, Google ADK)",
+    "Backend Engineer: high-performance APIs and microservices (Django, FastAPI, Node.js)",
+    "Product Engineer: owning features end to end, from data model to dashboard",
+    "Platform Engineer: Frappe / ERPNext customization and integrations"
   ],
-  "availability": "Open to full-time, contract, or consulting — remote or hybrid (Lagos / WAT).",
+  "availability": "Open to full-time, contract, or consulting. Remote or hybrid (Lagos / WAT).",
   "projects": [
     {
       "title": "Taimako.AI",
@@ -48,7 +48,7 @@
     },
     {
       "title": "Blug",
-      "description": "A blog management system for developers and technical writers — a \"bring your own UI\" alternative to Hashnode, Medium, and Dev.to, with fine-grained search, tagging, and categories exposed through API keys.",
+      "description": "A blog management system for developers and technical writers, a \"bring your own UI\" alternative to Hashnode, Medium, and Dev.to, with fine-grained search, tagging, and categories exposed through API keys.",
       "tools": [
         "Django",
         "Cloudflare",
@@ -112,7 +112,7 @@
     },
     {
       "title": "Simple Rules to Follow When Building Multi-Agent Systems",
-      "description": "Practical guidelines for designing reliable, maintainable multi-agent AI architectures — covering orchestration patterns, failure handling, and inter-agent communication.",
+      "description": "Practical guidelines for designing reliable, maintainable multi-agent AI architectures, covering orchestration patterns, failure handling, and inter-agent communication.",
       "published_date": "2025",
       "time_to_read": "5 min read",
       "link": "https://medium.com/towards-artificial-intelligence/simple-rules-to-follow-when-building-multi-agent-systems-c7cbab686411"
@@ -149,7 +149,7 @@
         "Built FastAPI microservices powering AI workflows, knowledge retrieval, and internal automation.",
         "Implemented a Redis caching layer for conversation history, reducing database load and improving response performance.",
         "Containerized AI services with Docker, published images via GHCR, and deployed to cloud VMs / EC2.",
-        "Owned and developed the Vendkit platform facilitating vending operations for businesses — dashboard, API, and team management.",
+        "Owned and developed the Vendkit platform facilitating vending operations for businesses: dashboard, API, and team management.",
         "Built CRM-style operational tools and optimized Frappe/ERPNext backend queries and data extraction pipelines."
       ],
       "start_date": "February 2025",
@@ -200,28 +200,28 @@
   "robotics": [
     {
       "title": "Machine Vision Robotic Arm",
-      "description": "Final-year robotics project combining computer vision and arm control — a custom-trained detector for locating objects, camera calibration, and forward/inverse kinematics driving an Arduino-controlled robotic arm in real time.",
+      "description": "Final-year robotics project combining computer vision and arm control: a custom-trained detector for locating objects, camera calibration, and forward/inverse kinematics driving an Arduino-controlled robotic arm in real time.",
       "tools": ["Python", "C++", "OpenCV", "Arduino", "Kinematics"],
       "link": "",
       "github_url": "https://github.com/stenwire/Machine-Vision-Robotic-Arm"
     },
     {
       "title": "Petrol Station Queue Length Optimization",
-      "description": "Coursework modeling petrol station wait times — time-series analysis, VAR, and LSTM forecasting to help operators predict congestion, staff peak hours, and cut queue lengths.",
+      "description": "Coursework modeling petrol station wait times: time-series analysis, VAR, and LSTM forecasting to help operators predict congestion, staff peak hours, and cut queue lengths.",
       "tools": ["Python", "Jupyter", "LSTM", "VAR"],
       "link": "",
       "github_url": "https://github.com/stenwire/Petrol-Station-Queue-Length-Optimization"
     },
     {
       "title": "ROS2 Robotics Lab",
-      "description": "Dockerized ROS2 Humble setup with Gazebo Harmonic and TurtleBot3 — a hands-on workshop environment for running robotics simulations cross-platform with no local ROS install needed.",
+      "description": "Dockerized ROS2 Humble setup with Gazebo Harmonic and TurtleBot3, a hands-on workshop environment for running robotics simulations cross-platform with no local ROS install needed.",
       "tools": ["ROS2", "Docker", "Gazebo", "TurtleBot3"],
       "link": "",
       "github_url": "https://github.com/stenwire/ros2-robotics-lab"
     },
     {
       "title": "Basic MATLAB SLAM",
-      "description": "SLAM (Simultaneous Localization and Mapping) coursework in MATLAB — offline processing with visualization of floor-plan mapping and trajectory optimization.",
+      "description": "SLAM (Simultaneous Localization and Mapping) coursework in MATLAB: offline processing with visualization of floor-plan mapping and trajectory optimization.",
       "tools": ["MATLAB", "SLAM"],
       "link": "",
       "github_url": "https://github.com/UNN-MCT-Robotics/Basic-Matlab-SLAM"
@@ -244,7 +244,7 @@
     },
     {
       "title": "speech-diarizer",
-      "description": "A CLI that transcribes audio with speaker diarization — who spoke when, down to word-level timing.",
+      "description": "A CLI that transcribes audio with speaker diarization: who spoke when, down to word-level timing.",
       "tools": ["Python", "Vosk"],
       "link": "",
       "github_url": "https://github.com/stenwire/speech-diarizer"

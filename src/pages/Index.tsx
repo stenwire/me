@@ -14,7 +14,7 @@ const Index = () => {
   const { isLoading } = usePortfolioData();
 
   useEffect(() => {
-    document.title = "Stephen Nwankwo — Software Engineer";
+    document.title = "Stephen Nwankwo | Software Engineer";
   }, []);
 
   if (isLoading) {

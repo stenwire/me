@@ -3,14 +3,14 @@ import { useEffect, useRef, useState } from "react";
 type Theme = "light" | "dark";
 
 const DARK_QUIPS = [
-  "Sorry Snow White — the mirror's off duty.",
+  "Sorry Snow White, the mirror's off duty.",
   "Welcome to the dark side. We have clean code.",
   "Dark mode on. Your retinas say thank you.",
   "Shhh. The pixels are sleeping.",
 ];
 
 const LIGHT_QUIPS = [
-  "Sorry vampires — we're going bright.",
+  "Sorry vampires, we're going bright.",
   "Let there be light. My electricity bill disagrees.",
   "Lights on. Squint responsibly.",
   "Good morning, even if it isn't.",

@@ -41,7 +41,7 @@ const Writing = () => {
         label="Writing"
         count={data.writings.length}
         statement="I also write"
-        sub="Field notes on the systems I build, break, and rebuild — agents, APIs, and the databases underneath."
+        sub="Field notes on the systems I build, break, and rebuild: agents, APIs, and the databases underneath."
       />
 
       <div className="mq" aria-label="Selected writing">

@@ -61,8 +61,8 @@ const Hero = () => {
               aria-expanded={pinned}
             >
               <PersonIcon />
-            </button>{" "}
-            — {data.hero.sub_heading}
+            </button>,{" "}
+            {data.hero.sub_heading}
           </p>
           <div className="hero-actions">
             <a className="hero-cta" href={`mailto:${data.contact.email}`}>
@@ -83,7 +83,7 @@ const Hero = () => {
           {portrait}
           <div className="cap mn">
             <span>
-              {data.hero.name} — {data.about.location}
+              {data.hero.name} · {data.about.location}
             </span>
             <button type="button" onClick={() => setPinned(false)} aria-label="Close photo">
               ✕
