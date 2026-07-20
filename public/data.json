@@ -231,7 +231,7 @@
       "description": "A web-based simulator for visualizing forward and inverse kinematics on a robotic arm model, built to make the underlying math tangible and interactive.",
       "tools": ["Kinematics", "Simulation"],
       "link": "",
-      "github_url": ""
+      "github_url": "https://github.com/stenwire/jointspace"
     }
   ],
   "special": [
